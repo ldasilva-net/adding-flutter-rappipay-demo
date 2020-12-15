@@ -1,0 +1,55 @@
+name: flutter_module
+description: A new flutter module project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+  flutter: 1.22.5
+
+dependencies:
+  flutter:
+    sdk: flutter  
+  hooks_riverpod: 0.12.1
+  flutter_hooks: 0.14.1
+  freezed_annotation: 0.12.0
+  font_awesome_flutter: 8.10.0
+  shimmer: 1.1.2
+  supercharged: 1.11.1
+  fluro: 1.7.7
+  flutter_svg: 0.19.1
+  logger: 0.9.4
+
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: 0.12.2
+  mockito: 4.1.3
+  build_runner: 1.10.4
+  json_serializable: 3.5.0
+  lint: 1.3.0
+  assets_scanner: 1.1.2
+
+flutter:  
+  uses-material-design: true
+
+  assets:
+  - assets/icons/image_icons/transaction_default/transaction_default_icon.webp
+  - assets/icons/vector_icons/divide_icon.svg
+  - assets/icons/vector_icons/more_dots_icon.svg
+  - assets/icons/vector_icons/support_icon.svg
+  - assets/icons/vector_icons/ticket_icon.svg
+
+  fonts:
+  - family: Poppins
+    fonts:
+      - asset: assets/fonts/poppins_regular.ttf
+      - asset: assets/fonts/poppins_semi_bold.ttf
+        weight: 600
+  
+  module:
+    androidX: true
+    androidPackage: com.rappipay_demo.flutter_module
+    iosBundleIdentifier: com.rappipaydemo.flutterModule
