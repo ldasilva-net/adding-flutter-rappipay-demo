@@ -23,12 +23,24 @@ class AppRouter {
       return Container();
     });
     _router.define(AppRoutes.root, handler: rootHandler);
+
     _router.define(AppRoutes.home, handler: homeHandler);
     _router.define(AppRoutes.homeTransactionHistory,
         handler: homeTransactionHistoryHandler,
         transitionType: TransitionType.inFromLeft);
     _router.define(AppRoutes.homeTransactionDetail,
         handler: homeTransactionDetailHandler);
+
+    _router.define(AppRoutes.history,
+        handler: historyHandler, transitionType: TransitionType.inFromLeft);
+    _router.define(AppRoutes.historyDetail, handler: historyDetailHandler);
+
+    _router.define(AppRoutes.partialView1Test,
+        handler: partialView1Handler,
+        transitionType: TransitionType.inFromLeft);
+    _router.define(AppRoutes.partialView2Test,
+        handler: partialView2Handler,
+        transitionType: TransitionType.inFromLeft);
   }
 
   Route<dynamic> generateRoutes(RouteSettings routeSettings) =>

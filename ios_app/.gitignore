@@ -1,0 +1,48 @@
+
+.DS_Store
+*/.DS_Store
+*.DS_Store
+*Breakpoints_v2.xcbkptlist
+*/Breakpoints_v2.xcbkptlist
+Grability/.DS_Store
+# User specific files
+**/*.xcodeproj/xcshareddata/xcschemes/*
+**/*.xcworkspace/xcuserdata/*
+**/*/Pods/Pods.xcodeproj/xcuserdata/*
+**/*/SQLite/SQLite.xcodeproj/xcuserdata/*
+*/UserInterfaceState.xcuserstate
+coverage
+
+#Scripts output
+scripts/hooks/pre-commit/output.txt
+
+#Pods
+Pods/
+**/Pods
+*/Pods/
+*/Podfile.lock
+Podfile.lock
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.orig
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## Aditional 
+*/xcschememanagement.plist
+xcuserdata/
+DerivedData
+
+DerivedData
+
+## Git hooks 
+.githooks/post-checkout
+.githooks/post-commit
+.githooks/post-merge
+.githooks/pre-push

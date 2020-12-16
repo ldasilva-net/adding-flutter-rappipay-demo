@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FiN-Ft-AbN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Integration test-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-Sa-Tal">
+                                <rect key="frame" x="57" y="284" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.84313725490196079" blue="0.84313725490196079" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Transactions - Main Engine"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-vC-N90">
+                                <rect key="frame" x="57" y="377" width="300" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.84313725490196079" blue="0.84313725490196079" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Partial Views - New Engines"/>
+                                <connections>
+                                    <segue destination="ccJ-hw-h3V" kind="show" id="Qk0-uy-Kkv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmA-Ll-gMV">
+                                <rect key="frame" x="57" y="465" width="300" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83921568627450982" green="0.84313725490196079" blue="0.84313725490196079" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Stop all engines"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Integration test" id="Una-F8-g7D"/>
+                    <connections>
+                        <outlet property="stopEnginesButton" destination="AmA-Ll-gMV" id="fWz-4n-m2N"/>
+                        <outlet property="testMainEngineButton" destination="hhm-Sa-Tal" id="FfU-Ey-zwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.0434782608696" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="opU-Qr-sxq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FiN-Ft-AbN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U2c-1v-23h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bQA-l5-wK8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ka0-hp-FXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="93.75"/>
+        </scene>
+        <!--Partial Views View Controller-->
+        <scene sceneID="Dix-Ij-293">
+            <objects>
+                <viewController id="ccJ-hw-h3V" customClass="PartialViewsViewController" customModule="iosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dp8-66-ha7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkK-yn-Zye" userLabel="PartialView1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="412"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mx7-lE-aNf">
+                                        <rect key="frame" x="188.5" y="187.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mx7-lE-aNf" firstAttribute="centerX" secondItem="kkK-yn-Zye" secondAttribute="centerX" id="WvL-xG-9W1"/>
+                                    <constraint firstItem="mx7-lE-aNf" firstAttribute="centerY" secondItem="kkK-yn-Zye" secondAttribute="centerY" id="gVT-hd-kTe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCt-BE-rEL" userLabel="PartialView2">
+                                <rect key="frame" x="0.0" y="500" width="414" height="362"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-Gl-A8D">
+                                        <rect key="frame" x="188.5" y="162.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fJL-Gl-A8D" firstAttribute="centerY" secondItem="hCt-BE-rEL" secondAttribute="centerY" id="RzD-8p-9Ko"/>
+                                    <constraint firstItem="fJL-Gl-A8D" firstAttribute="centerX" secondItem="hCt-BE-rEL" secondAttribute="centerX" id="tUH-En-ynO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sV2-gn-syQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hCt-BE-rEL" firstAttribute="leading" secondItem="sV2-gn-syQ" secondAttribute="leading" id="78i-Pg-fBr"/>
+                            <constraint firstItem="sV2-gn-syQ" firstAttribute="bottom" secondItem="hCt-BE-rEL" secondAttribute="bottom" id="H5V-ht-6OU"/>
+                            <constraint firstItem="hCt-BE-rEL" firstAttribute="trailing" secondItem="sV2-gn-syQ" secondAttribute="trailing" id="H9P-Tx-z39"/>
+                            <constraint firstItem="kkK-yn-Zye" firstAttribute="top" secondItem="sV2-gn-syQ" secondAttribute="top" id="SJG-Zx-JJn"/>
+                            <constraint firstItem="kkK-yn-Zye" firstAttribute="trailing" secondItem="sV2-gn-syQ" secondAttribute="trailing" id="agN-HY-bEN"/>
+                            <constraint firstItem="hCt-BE-rEL" firstAttribute="top" secondItem="kkK-yn-Zye" secondAttribute="bottom" id="dXQ-TU-qkL"/>
+                            <constraint firstItem="kkK-yn-Zye" firstAttribute="leading" secondItem="sV2-gn-syQ" secondAttribute="leading" id="s6e-eP-87h"/>
+                            <constraint firstItem="hCt-BE-rEL" firstAttribute="top" secondItem="kkK-yn-Zye" secondAttribute="top" constant="412" id="suv-iT-0e3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dPb-G8-r1s"/>
+                    <connections>
+                        <outlet property="partialView1View" destination="kkK-yn-Zye" id="GJ4-sh-BLA"/>
+                        <outlet property="partialView2View" destination="hCt-BE-rEL" id="fnC-8C-66N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zW-yg-YbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-580"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
