@@ -19,7 +19,7 @@ class PartialViewsViewController: UIViewController {
         createPartialView(partialView2View, partialView2EngineId, "/partialView2Test")
     }
     
-    // MARK: Utils
+    // MARK: Private functions
     private func createPartialView(_ destinationView: UIView, _ engineId: String, _ path: String) {
         do {
             let multiplatformEngine = try MultiplatformDemo.instance.getOrStartNewEngineInstance(engineId)

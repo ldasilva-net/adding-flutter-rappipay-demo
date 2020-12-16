@@ -12,7 +12,9 @@ open class RouterChannel : NSObject {
     private let routerChannel: FlutterMethodChannel
     private var isChannelReady: Bool = false
     private var onReadyHandler: () -> () = {}
-    private var returnToPlatformHandler: ReturnToPlatformHandler?
+    private var returnToPlatformHandler: (_ routerResult: RouterResult?) -> () = {
+        (routerResult) -> () in
+    }
         
     init(with messenger: FlutterBinaryMessenger) {
         routerChannel = FlutterMethodChannel(
@@ -40,16 +42,16 @@ open class RouterChannel : NSObject {
                     routerResult = try! JSONDecoder().decode(RouterResult.self, from: routerResultJSON)
                 }
                                 
-                returnToPlatformHandler?.returnToPlatform(routerResult)
+                returnToPlatformHandler(routerResult)
             
             default: result(FlutterMethodNotImplemented)
         }
     }
     
-    public func onReady(_ onReadyHandler:@escaping () -> ()) {
-        self.onReadyHandler = onReadyHandler
+    public func onReady(_ handler:@escaping () -> ()) {
+        self.onReadyHandler = handler
         if (isChannelReady) {
-            onReadyHandler()
+            self.onReadyHandler()
         }
     }
 
@@ -60,8 +62,8 @@ open class RouterChannel : NSObject {
         routerChannel.invokeMethod(navigateTo, arguments: jsonString)
     }
 
-    public func setReturnToPlatformHandler(_ handler: ReturnToPlatformHandler) {
-        returnToPlatformHandler = handler
+    public func setReturnToPlatformHandler(_ handler:@escaping (_ routerResult: RouterResult?) -> ()) {
+        self.returnToPlatformHandler = handler
     }
 
     public func destroy() {

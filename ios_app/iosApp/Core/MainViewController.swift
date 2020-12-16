@@ -8,7 +8,7 @@
 import UIKit
 import Flutter
 
-class MainViewController: UIViewController, ReturnToPlatformHandler {
+class MainViewController: UIViewController {
     // MARK: Configuration
     @IBOutlet weak var testMainEngineButton: UIButton! {
         didSet {
@@ -35,7 +35,7 @@ class MainViewController: UIViewController, ReturnToPlatformHandler {
                         let routerArgs = RouterArgs(path: "/history", args: "Back to platform!")
                         try multiplatformRouter.navigateTo(routerArgs)
                         
-                        multiplatformRouter.setReturnToPlatformHandler(self)
+                        multiplatformRouter.setReturnToPlatformHandler(self.returnToPlatform)
                         
                         let multiplatformViewController = multiplatformEngine.buildNewComponent().getViewController()
                         navigationController.pushViewController(multiplatformViewController, animated: true)
@@ -57,17 +57,6 @@ class MainViewController: UIViewController, ReturnToPlatformHandler {
         }
     }
     
-    func returnToPlatform(_ routerResult: RouterResult?) {
-        if let navigationController = navigationController {
-            navigationController.popViewController(animated: true)
-            navigationController.setNavigationBarHidden(false, animated: true)
-        }
-                
-        if let result = routerResult?.result {
-            showToast(message: result, font: .systemFont(ofSize: 12.0))
-        }
-    }
-    
     @IBAction func stopEngines(_ sender: UIButton) {
         MultiplatformDemo.instance.destroy()
         showToast(message: "All engines were stopped", font: .systemFont(ofSize: 12.0))
@@ -86,7 +75,18 @@ class MainViewController: UIViewController, ReturnToPlatformHandler {
         }
     }
     
-    // MARK: Utils
+    // MARK: Private functions
+    private func returnToPlatform(_ routerResult: RouterResult?) {
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
+            navigationController.setNavigationBarHidden(false, animated: true)
+        }
+                
+        if let result = routerResult?.result {
+            showToast(message: result, font: .systemFont(ofSize: 12.0))
+        }
+    }
+    
     private func showToast(message : String, font: UIFont) {
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-100, width: 200, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)

@@ -20,7 +20,6 @@
 		B1741C92258950D80098A2DF /* MultiplatformDemoPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C7C258950D80098A2DF /* MultiplatformDemoPlugin.swift */; };
 		B1741C9C258950D80098A2DF /* RouterArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8B258950D80098A2DF /* RouterArgs.swift */; };
 		B1741C9D258950D80098A2DF /* RouterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8C258950D80098A2DF /* RouterResult.swift */; };
-		B1741C9E258950D80098A2DF /* ReturnToPlatformHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8D258950D80098A2DF /* ReturnToPlatformHandler.swift */; };
 		B1741C9F258950D80098A2DF /* RouterChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8E258950D80098A2DF /* RouterChannel.swift */; };
 		B1741CA0258950D80098A2DF /* MultiplatformDemoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8F258950D80098A2DF /* MultiplatformDemoComponent.swift */; };
 		B1741CAB2589651A0098A2DF /* PartialViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741CAA258965190098A2DF /* PartialViewsViewController.swift */; };
@@ -43,7 +42,6 @@
 		B1741C7C258950D80098A2DF /* MultiplatformDemoPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoPlugin.swift; sourceTree = "<group>"; };
 		B1741C8B258950D80098A2DF /* RouterArgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterArgs.swift; sourceTree = "<group>"; };
 		B1741C8C258950D80098A2DF /* RouterResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterResult.swift; sourceTree = "<group>"; };
-		B1741C8D258950D80098A2DF /* ReturnToPlatformHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnToPlatformHandler.swift; sourceTree = "<group>"; };
 		B1741C8E258950D80098A2DF /* RouterChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterChannel.swift; sourceTree = "<group>"; };
 		B1741C8F258950D80098A2DF /* MultiplatformDemoComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoComponent.swift; sourceTree = "<group>"; };
 		B1741CAA258965190098A2DF /* PartialViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialViewsViewController.swift; sourceTree = "<group>"; };
@@ -100,10 +98,10 @@
 		B1741C562589452B0098A2DF /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				B1741C6E2589458B0098A2DF /* Multiplatform */,
-				B1741C6D258945840098A2DF /* Core */,
-				B1741C602589452D0098A2DF /* Assets.xcassets */,
 				B1741C652589452D0098A2DF /* Info.plist */,
+				B1741C602589452D0098A2DF /* Assets.xcassets */,
+				B1741C6D258945840098A2DF /* Core */,
+				B1741C6E2589458B0098A2DF /* Multiplatform */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				B1741C8A258950D80098A2DF /* Models */,
-				B1741C8D258950D80098A2DF /* ReturnToPlatformHandler.swift */,
 				B1741C8E258950D80098A2DF /* RouterChannel.swift */,
 			);
 			path = Router;
@@ -320,7 +317,6 @@
 				B1741C91258950D80098A2DF /* MultiplatformDemo.swift in Sources */,
 				B1741C92258950D80098A2DF /* MultiplatformDemoPlugin.swift in Sources */,
 				B1741C9C258950D80098A2DF /* RouterArgs.swift in Sources */,
-				B1741C9E258950D80098A2DF /* ReturnToPlatformHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
