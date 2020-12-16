@@ -25,44 +25,47 @@ class TransactionHistoryModule extends HookWidget {
 
     return Scaffold(
       backgroundColor: AppColor.whiteTwo,
-      body: Container(
-        margin: const EdgeInsets.only(top: 50, left: 16, right: 16, bottom: 20),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Container(
-                width: double.infinity,
-                margin: const EdgeInsets.only(bottom: 6),
-                alignment: Alignment.topLeft,
-                child: GestureDetector(
-                  onTap: () =>
-                      transactionHistoryModuleController.onBackPressed(),
-                  child: const Icon(
-                    FontAwesomeIcons.chevronLeft,
-                    color: AppColor.rappi,
-                    size: 24,
+      body: SafeArea(
+        child: Container(
+          margin:
+              const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 20),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(bottom: 6),
+                  alignment: Alignment.topLeft,
+                  child: GestureDetector(
+                    onTap: () =>
+                        transactionHistoryModuleController.onBackPressed(),
+                    child: const Icon(
+                      FontAwesomeIcons.chevronLeft,
+                      color: AppColor.rappi,
+                      size: 24,
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SliverToBoxAdapter(
-              child: Text(
-                'Transacciones',
-                style: AppTextTheme.h1BrownSemibold,
+              const SliverToBoxAdapter(
+                child: Text(
+                  'Transacciones',
+                  style: AppTextTheme.h1BrownSemibold,
+                ),
               ),
-            ),
-            SliverToBoxAdapter(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    TransactionHistoryHeader()
-                  ]),
-            ),
-            const TransactionHistoryList()
-          ],
+              SliverToBoxAdapter(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TransactionHistoryHeader()
+                    ]),
+              ),
+              const TransactionHistoryList()
+            ],
+          ),
         ),
       ),
     );

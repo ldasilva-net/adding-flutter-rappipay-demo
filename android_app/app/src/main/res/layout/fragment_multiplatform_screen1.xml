@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Transactions - Main Engine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="Partial Views - New Engines" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="Stop all engines" />
+
+</LinearLayout>

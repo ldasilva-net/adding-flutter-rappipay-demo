@@ -21,7 +21,7 @@ class HistoryController extends TransactionHistoryModuleController {
   }
 
   @override
-  void onDispose() {
+  void onBackPressed() {
     _platformRepository.returnToPlatform(RouterResult(result: "Its all ok!"));
   }
 }

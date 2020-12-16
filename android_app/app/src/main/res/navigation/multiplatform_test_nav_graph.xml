@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multiplatform_test_nav_graph"
+    app:startDestination="@+id/multiplatform_screen1_fragment">
+
+    <fragment
+        android:id="@+id/multiplatform_screen1_fragment"
+        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen1Fragment"
+        tools:layout="@layout/fragment_multiplatform_screen1" >
+        <action
+            android:id="@+id/action_to_screen2"
+            app:destination="@+id/multiplatform_screen2_fragment" />
+        <action
+            android:id="@+id/action_to_screen3"
+            app:destination="@+id/multiplatform_screen3_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/multiplatform_screen2_fragment"
+        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen2Fragment" />
+
+    <fragment
+        android:id="@+id/multiplatform_screen3_fragment"
+        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen3Fragment" />
+
+</navigation>
