@@ -1,19 +1,18 @@
 package com.rappipay_demo.android_app
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.rappipay_demo.android_app.fragments.MultiplatformScreen1Fragment
-import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragment
-import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragmentLifecycle
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
+import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoActivity
 
-class MultiplatformTestActivity : AppCompatActivity(), ToolbarListener,
-    MultiplatformScreen1Fragment.MultiplatformScreen1Listener, MultiplatformDemoFragmentLifecycle {
+class MultiplatformTestActivity : MultiplatformDemoActivity(), ToolbarListener,
+    MultiplatformScreen1Fragment.MultiplatformScreen1Listener {
 
     fun currentNavController(): NavController = findNavController(R.id.navHostFragment)
+
+    override fun currentNavHostFragment() = supportFragmentManager.findFragmentById(R.id.navHostFragment)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,16 +30,6 @@ class MultiplatformTestActivity : AppCompatActivity(), ToolbarListener,
             }
             else -> currentNavController().navigateUp()
         }
-    }
-
-    private fun currentMultiplatformFragment() : MultiplatformDemoFragment? {
-        supportFragmentManager.findFragmentById(R.id.navHostFragment)?.let { navHostFragment ->
-            val fragment = navHostFragment.childFragmentManager.fragments[0]
-            if (fragment is MultiplatformDemoFragment && fragment.isVisible) {
-                return fragment
-            }
-        }
-        return null
     }
 
     private fun loadMultiplatformDemo() {
@@ -78,44 +67,6 @@ class MultiplatformTestActivity : AppCompatActivity(), ToolbarListener,
             MultiplatformDemo.startNewEngineInstance(applicationContext, NEW_ENGINE_ID)
         }
         currentNavController().navigate(R.id.action_to_screen3)
-    }
-    // endregion
-
-    // region MultiplatformDemoFragmentLifecycle
-    override fun onPostResume() {
-        super.onPostResume()
-        currentMultiplatformFragment()?.onPostResume()
-    }
-
-    override fun onNewIntent(intent: Intent) {
-        super.onNewIntent(intent)
-        currentMultiplatformFragment()?.onNewIntent(intent)
-    }
-
-    override fun onBackPressed() {
-        onSupportNavigateUp()
-        currentMultiplatformFragment()?.onBackPressed()
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String?>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        currentMultiplatformFragment()?.onRequestPermissionsResult(
-            requestCode,
-            permissions,
-            grantResults
-        )
-    }
-
-    override fun onUserLeaveHint() {
-        currentMultiplatformFragment()?.onUserLeaveHint()
-    }
-
-    override fun onTrimMemory(level: Int) {
-        currentMultiplatformFragment()?.onTrimMemory(level)
     }
     // endregion
 
