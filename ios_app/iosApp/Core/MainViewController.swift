@@ -104,7 +104,4 @@ class MainViewController: UIViewController {
             toastLabel.removeFromSuperview()
         })
     }
-    
-    // MARK: Constants
-    let NEW_ENGINE_ID = "testing_new_engine"
 }
