@@ -35,7 +35,7 @@ class RouterChannelServiceImpl extends RouterChannelDatasource {
 
           final routerArgs = RouterArgs.fromJson(routerArgsJson);
 
-          _appRouter?.navigateTo(
+          _appRouter.navigateTo(
             routerArgs.path,
             argument: routerArgs.args,
             clearStack: routerArgs.clearStack,
@@ -57,7 +57,7 @@ class RouterChannelServiceImpl extends RouterChannelDatasource {
         RouterChannelConstants.reportChannelIsReady,
       );
     } catch (e) {
-      _appLogger?.e(e); //TODO Error handler
+      _appLogger.e(e); //TODO Error handler
     }
   }
 
@@ -72,8 +72,8 @@ class RouterChannelServiceImpl extends RouterChannelDatasource {
         },
       );
     } catch (e) {
-      _appRouter?.showInfoMessage('Exception', e.toString());
-      _appLogger?.e(e); //TODO Error handler
+      _appRouter.showInfoMessage('Exception', e.toString());
+      _appLogger.e(e); //TODO Error handler
     }
   }
 }
