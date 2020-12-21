@@ -1,10 +1,10 @@
-package com.rappipay_demo.android_app.fragments
+package com.rappipay_demo.android_app.core.fragments
 
 import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.rappipay_demo.android_app.ToolbarListener
+import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragment
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
 import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterArgs

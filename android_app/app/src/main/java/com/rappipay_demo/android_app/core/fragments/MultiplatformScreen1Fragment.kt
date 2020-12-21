@@ -1,4 +1,4 @@
-package com.rappipay_demo.android_app.fragments
+package com.rappipay_demo.android_app.core.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.rappipay_demo.android_app.R
-import com.rappipay_demo.android_app.ToolbarListener
+import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
 
 class MultiplatformScreen1Fragment : Fragment() {

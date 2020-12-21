@@ -1,4 +1,4 @@
-package com.rappipay_demo.android_app.fragments
+package com.rappipay_demo.android_app.core.fragments
 
 import android.content.Context
 import android.content.Intent
@@ -6,21 +6,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.rappipay_demo.android_app.R
-import com.rappipay_demo.android_app.ToolbarListener
-import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragment
+import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemoComponent
-import com.rappipay_demo.android_app.multiplatform.MultiplatformDemoEngine
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragmentLifecycle
 import com.rappipay_demo.android_app.multiplatform.exceptions.FragmentLifecycleNotImplementedException
-import com.rappipay_demo.android_app.multiplatform.plugin.MultiplatformDemoPlugin
 import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterArgs
-import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterResult
 
 class MultiplatformScreen3Fragment : Fragment(),
     MultiplatformDemoFragmentLifecycle {

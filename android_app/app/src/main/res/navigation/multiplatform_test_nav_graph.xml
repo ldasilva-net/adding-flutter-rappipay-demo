@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/multiplatform_screen1_fragment"
-        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen1Fragment"
+        android:name="com.rappipay_demo.android_app.core.fragments.MultiplatformScreen1Fragment"
         tools:layout="@layout/fragment_multiplatform_screen1" >
         <action
             android:id="@+id/action_to_screen2"
@@ -19,10 +19,10 @@
 
     <fragment
         android:id="@+id/multiplatform_screen2_fragment"
-        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen2Fragment" />
+        android:name="com.rappipay_demo.android_app.core.fragments.MultiplatformScreen2Fragment" />
 
     <fragment
         android:id="@+id/multiplatform_screen3_fragment"
-        android:name="com.rappipay_demo.android_app.fragments.MultiplatformScreen3Fragment" />
+        android:name="com.rappipay_demo.android_app.core.fragments.MultiplatformScreen3Fragment" />
 
 </navigation>

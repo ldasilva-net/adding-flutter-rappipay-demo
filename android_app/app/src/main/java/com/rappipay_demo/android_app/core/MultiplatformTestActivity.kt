@@ -1,9 +1,10 @@
-package com.rappipay_demo.android_app
+package com.rappipay_demo.android_app.core
 
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.rappipay_demo.android_app.fragments.MultiplatformScreen1Fragment
+import com.rappipay_demo.android_app.R
+import com.rappipay_demo.android_app.core.fragments.MultiplatformScreen1Fragment
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoActivity
 
