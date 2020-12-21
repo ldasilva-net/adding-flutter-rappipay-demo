@@ -1,27 +1,27 @@
 import 'dart:convert';
 
 import 'package:fluro/fluro.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_module/app/core/logger/app_logger.dart';
 import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter/services.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_module/app/data/datasources/router_channel/router_channel_datasource.dart';
 import 'package:flutter_module/app/data/datasources/router_channel/router_channel_datasource_constants.dart';
 import 'package:flutter_module/app/data/models/router/router_args.dart';
 import 'package:flutter_module/app/data/models/router/router_result.dart';
 
 class RouterChannelServiceImpl extends RouterChannelDatasource {
-  final Reader _read;
-
-  AppRouter _appRouter;
-  AppLogger _appLogger;
+  final AppRouter _appRouter;
+  final AppLogger _appLogger;
 
   static const _routerChannel =
       MethodChannel(RouterChannelConstants.routerChannelId);
 
-  RouterChannelServiceImpl(this._read) {
-    _appRouter = _read(appRouterProvider);
-    _appLogger = _read(appLoggerProvider);
+  RouterChannelServiceImpl({
+    @required AppRouter appRouter,
+    @required AppLogger appLogger,
+  })  : _appRouter = appRouter,
+        _appLogger = appLogger {
     _setupRouterChannel();
     reportChannelIsReady();
   }

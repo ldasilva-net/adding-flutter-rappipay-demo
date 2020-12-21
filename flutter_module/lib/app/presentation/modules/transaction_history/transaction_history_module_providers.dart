@@ -13,8 +13,9 @@ final totalPagesProvider = StateProvider<int>((ref) => 1);
 final transactionsPagesProvider =
     FutureProvider.autoDispose.family<TransactionResponse, int>(
   (ref, page) async {
-    final repository = ref.read(transactionsRepositoryProvider);
-    final transactionsResponse = await repository.fetchTransactions(page);
+    final transactionsRepository = ref.watch(transactionsRepositoryProvider);
+    final transactionsResponse =
+        await transactionsRepository.fetchTransactions(page);
 
     ref.read(totalPagesProvider).state = transactionsResponse.totalPages;
 

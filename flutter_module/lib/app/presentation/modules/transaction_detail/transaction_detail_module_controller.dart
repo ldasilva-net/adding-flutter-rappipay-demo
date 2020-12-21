@@ -1,8 +1,11 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter_module/app/presentation/modules/_base/base_module_controller.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class TransactionDetailModuleController extends BaseModuleController {
-  TransactionDetailModuleController(Reader read) : super(read);
+  TransactionDetailModuleController({
+    @required AppRouter appRouter,
+  }) : super(appRouter: appRouter);
 
   @override
   Future<void> onInit() async {
