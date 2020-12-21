@@ -23,6 +23,7 @@
 		B1741C9F258950D80098A2DF /* RouterChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8E258950D80098A2DF /* RouterChannel.swift */; };
 		B1741CA0258950D80098A2DF /* MultiplatformDemoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741C8F258950D80098A2DF /* MultiplatformDemoComponent.swift */; };
 		B1741CAB2589651A0098A2DF /* PartialViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741CAA258965190098A2DF /* PartialViewsViewController.swift */; };
+		B1741CB4259102680098A2DF /* MultiplatformDemoRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1741CB3259102670098A2DF /* MultiplatformDemoRoutes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B1741C8E258950D80098A2DF /* RouterChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterChannel.swift; sourceTree = "<group>"; };
 		B1741C8F258950D80098A2DF /* MultiplatformDemoComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoComponent.swift; sourceTree = "<group>"; };
 		B1741CAA258965190098A2DF /* PartialViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialViewsViewController.swift; sourceTree = "<group>"; };
+		B1741CB3259102670098A2DF /* MultiplatformDemoRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoRoutes.swift; sourceTree = "<group>"; };
 		CD13E383122F0AA01BA46CD0 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				B1741C7A258950D80098A2DF /* MultiplatformDemo.swift */,
 				B1741C8F258950D80098A2DF /* MultiplatformDemoComponent.swift */,
 				B1741C79258950D70098A2DF /* MultiplatformDemoEngine.swift */,
+				B1741CB3259102670098A2DF /* MultiplatformDemoRoutes.swift */,
 				B1741C75258950AF0098A2DF /* Errors */,
 				B1741C7B258950D80098A2DF /* Plugin */,
 			);
@@ -312,6 +315,7 @@
 				B1741CA0258950D80098A2DF /* MultiplatformDemoComponent.swift in Sources */,
 				B1741C9F258950D80098A2DF /* RouterChannel.swift in Sources */,
 				B1741C582589452B0098A2DF /* AppDelegate.swift in Sources */,
+				B1741CB4259102680098A2DF /* MultiplatformDemoRoutes.swift in Sources */,
 				B1741C77258950AF0098A2DF /* MultiplatformDemoEngineError.swift in Sources */,
 				B1741C5A2589452B0098A2DF /* SceneDelegate.swift in Sources */,
 				B1741C91258950D80098A2DF /* MultiplatformDemo.swift in Sources */,

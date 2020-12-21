@@ -12,6 +12,7 @@ import com.rappipay_demo.android_app.R
 import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemoComponent
+import com.rappipay_demo.android_app.multiplatform.MultiplatformDemoRoutes
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragmentLifecycle
 import com.rappipay_demo.android_app.multiplatform.exceptions.FragmentLifecycleNotImplementedException
 import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterArgs
@@ -53,8 +54,8 @@ class MultiplatformScreen3Fragment : Fragment(),
 
     override fun onResume() {
         super.onResume()
-        configureComponent(R.id.fragment_container_1, PARTIAL_VIEW_1_ENGINE_ID,"/partialView1Test")
-        configureComponent(R.id.fragment_container_2, PARTIAL_VIEW_2_ENGINE_ID,"/partialView2Test")
+        configureComponent(R.id.fragment_container_1, PARTIAL_VIEW_1_ENGINE_ID, MultiplatformDemoRoutes.PARTIAL_VIEW_1_TEST_PAGE)
+        configureComponent(R.id.fragment_container_2, PARTIAL_VIEW_2_ENGINE_ID, MultiplatformDemoRoutes.PARTIAL_VIEW_2_TEST_PAGE)
     }
 
     private fun configureToolbar() {

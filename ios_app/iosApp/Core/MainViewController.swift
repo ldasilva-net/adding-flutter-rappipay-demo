@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
                 
                 multiplatformRouter.onReady {
                     do {
-                        let routerArgs = RouterArgs(path: "/history", args: "Back to platform!")
+                        let routerArgs = RouterArgs(path: MultiplatformDemoRoutes.historyPage, args: "Back to platform!")
                         try multiplatformRouter.navigateTo(routerArgs)
                         
                         multiplatformRouter.setReturnToPlatformHandler(self.returnToPlatform)

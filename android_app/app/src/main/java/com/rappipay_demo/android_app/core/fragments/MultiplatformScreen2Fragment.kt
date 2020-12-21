@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragment
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
+import com.rappipay_demo.android_app.multiplatform.MultiplatformDemoRoutes
 import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterArgs
 import com.rappipay_demo.android_app.multiplatform.plugin.channels.router.models.RouterResult
 
@@ -25,7 +26,7 @@ class MultiplatformScreen2Fragment : MultiplatformDemoFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         configureToolbar()
-        configureComponent(RouterArgs("/history", args = "Back to platform!"))
+        configureComponent(RouterArgs(MultiplatformDemoRoutes.HISTORY_PAGE, args = "Back to platform!"))
     }
 
     private fun configureToolbar() {

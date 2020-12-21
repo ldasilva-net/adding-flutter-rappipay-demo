@@ -15,8 +15,8 @@ class PartialViewsViewController: UIViewController {
     
     // MARK: Lifecycle
     override func viewDidAppear(_ animated: Bool) {
-        createPartialView(partialView1View, partialView1EngineId, "/partialView1Test")
-        createPartialView(partialView2View, partialView2EngineId, "/partialView2Test")
+        createPartialView(partialView1View, partialView1EngineId, MultiplatformDemoRoutes.partialView1TestPage)
+        createPartialView(partialView2View, partialView2EngineId, MultiplatformDemoRoutes.partialView2TestPage)
     }
     
     // MARK: Private functions
