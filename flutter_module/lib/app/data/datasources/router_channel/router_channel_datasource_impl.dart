@@ -10,14 +10,14 @@ import 'package:flutter_module/app/data/datasources/router_channel/router_channe
 import 'package:flutter_module/app/data/models/router/router_args.dart';
 import 'package:flutter_module/app/data/models/router/router_result.dart';
 
-class RouterChannelServiceImpl extends RouterChannelDatasource {
+class RouterChannelDatasourceImpl extends RouterChannelDatasource {
   final AppRouter _appRouter;
   final AppLogger _appLogger;
 
   static const _routerChannel =
       MethodChannel(RouterChannelConstants.routerChannelId);
 
-  RouterChannelServiceImpl({
+  RouterChannelDatasourceImpl({
     @required AppRouter appRouter,
     @required AppLogger appLogger,
   })  : _appRouter = appRouter,

@@ -5,7 +5,7 @@ import 'package:flutter_module/app/data/datasources/router_channel/router_channe
 import 'package:flutter_module/app/data/datasources/router_channel/router_channel_datasource_impl.dart';
 
 final routerChannelDatasourceProvider = Provider<RouterChannelDatasource>(
-  (ref) => RouterChannelServiceImpl(
+  (ref) => RouterChannelDatasourceImpl(
     appRouter: ref.watch(appRouterProvider),
     appLogger: ref.watch(appLoggerProvider),
   ),
