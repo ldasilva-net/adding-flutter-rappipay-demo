@@ -1,3 +1,4 @@
+import 'package:flutter_module/app/core/common_widgets/app_nav_bar.dart';
 import 'package:flutter_module/app/core/theme/app_color.dart';
 import 'package:flutter_module/app/core/theme/app_text_theme.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_history/local_widgets/transaction_history_header.dart';
@@ -5,7 +6,6 @@ import 'package:flutter_module/app/presentation/modules/transaction_history/loca
 import 'package:flutter_module/app/presentation/modules/transaction_history/transaction_history_module_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TransactionHistoryModule extends HookWidget {
@@ -28,23 +28,13 @@ class TransactionHistoryModule extends HookWidget {
       body: SafeArea(
         child: Container(
           margin:
-              const EdgeInsets.only(top: 16, left: 16, right: 16, bottom: 20),
+              const EdgeInsets.only(top: 8, left: 16, right: 16, bottom: 20),
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
-                child: Container(
-                  width: double.infinity,
-                  margin: const EdgeInsets.only(bottom: 6),
-                  alignment: Alignment.topLeft,
-                  child: GestureDetector(
-                    onTap: () =>
-                        transactionHistoryModuleController.onBackPressed(),
-                    child: const Icon(
-                      FontAwesomeIcons.chevronLeft,
-                      color: AppColor.rappi,
-                      size: 24,
-                    ),
-                  ),
+                child: AppNavBar(
+                  onTapBack: () =>
+                      transactionHistoryModuleController.onBackPressed(),
                 ),
               ),
               const SliverToBoxAdapter(
