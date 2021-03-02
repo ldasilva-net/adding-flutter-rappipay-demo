@@ -5,12 +5,14 @@ import 'package:flutter_module/app/data/models/transactions/transaction_detail.d
 import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+final transactionDetailModuleWarmupReadyProvider =
+    StateProvider<bool>((ref) => false);
+
 final transactionDetailModuleControllerProvider =
     ScopedProvider<TransactionDetailModuleController>(null);
 
-final currentTransactionProvider = ScopedProvider<Transaction>(
-  (ref) => Transaction.fromJson(
-    json.decode('''
+final dummyTransaction = Transaction.fromJson(
+  json.decode('''
     {
       "title": "Transferencia bancaria",
       "amount": "- \$1,200.00",
@@ -29,8 +31,10 @@ final currentTransactionProvider = ScopedProvider<Transaction>(
       "transaction_id": "2223758f-70c2-49fa-9e61-cf2a93704957",
       "origin": "bank_transfer"
     }''') as Map<String, dynamic>,
-  ),
 );
+
+final currentTransactionProvider =
+    ScopedProvider<Transaction>((ref) => dummyTransaction);
 
 final currentTransactionDetailListProvider =
     Provider.autoDispose<List<TransactionDetail>>(

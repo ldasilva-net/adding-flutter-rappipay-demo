@@ -44,7 +44,7 @@ class RouterChannel : MethodChannel.MethodCallHandler {
         }
     }
 
-    fun navigateTo(routerArgs: RouterArgs) = routerChannel?.invokeMethod(NAVIGATE_TO, Gson().toJson(routerArgs))
+    fun navigateTo(routerArgs: RouterArgs) = routerChannel.invokeMethod(NAVIGATE_TO, Gson().toJson(routerArgs))
 
     fun setReturnToPlatformHandler(handler: (RouterResult?) -> Unit) {
         this.returnToPlatformHandler = handler

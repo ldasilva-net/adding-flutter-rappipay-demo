@@ -42,7 +42,7 @@ abstract class MultiplatformDemoFragment : Fragment(),
 
     protected fun configureComponent(routerArgs: RouterArgs, fragmentId: Int = R.id.fragment_container) {
         val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
-        multiplatformComponent?.let {
+        multiplatformComponent.let {
             transaction.replace(fragmentId, it.getFragment()).commit()
         }
 
@@ -58,15 +58,15 @@ abstract class MultiplatformDemoFragment : Fragment(),
 
     // region MultiplatformDemoFragmentLifecycle
     override fun onPostResume() {
-        multiplatformComponent?.onPostResume()
+        multiplatformComponent.onPostResume()
     }
 
     override fun onNewIntent(intent: Intent) {
-        multiplatformComponent?.onNewIntent(intent)
+        multiplatformComponent.onNewIntent(intent)
     }
 
     override fun onBackPressed() {
-        multiplatformComponent?.onBackPressed()
+        multiplatformComponent.onBackPressed()
     }
 
     override fun onRequestPermissionsResult(
@@ -76,7 +76,7 @@ abstract class MultiplatformDemoFragment : Fragment(),
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-        multiplatformComponent?.onRequestPermissionsResult(
+        multiplatformComponent.onRequestPermissionsResult(
             requestCode,
             permissions,
             grantResults
@@ -84,11 +84,11 @@ abstract class MultiplatformDemoFragment : Fragment(),
     }
 
     override fun onUserLeaveHint() {
-        multiplatformComponent?.onUserLeaveHint()
+        multiplatformComponent.onUserLeaveHint()
     }
 
     override fun onTrimMemory(level: Int) {
-        multiplatformComponent?.onTrimMemory(level)
+        multiplatformComponent.onTrimMemory(level)
     }
     // endregion
 }

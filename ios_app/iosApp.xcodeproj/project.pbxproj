@@ -29,6 +29,8 @@
 /* Begin PBXFileReference section */
 		136C0C703A8B92BE98816B36 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59927B5619F1BA68F0F9963E /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
+		B15EFA1325EE8A5E0011EB6B /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
+		B15EFA1425EE8A5E0011EB6B /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
 		B1741C542589452B0098A2DF /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1741C572589452B0098A2DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1741C592589452B0098A2DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,6 @@
 		B1741C5E2589452B0098A2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1741C602589452D0098A2DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1741C632589452D0098A2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B1741C652589452D0098A2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1741C76258950AF0098A2DF /* MultiplatformDemoEngineError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoEngineError.swift; sourceTree = "<group>"; };
 		B1741C79258950D70098A2DF /* MultiplatformDemoEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemoEngine.swift; sourceTree = "<group>"; };
 		B1741C7A258950D80098A2DF /* MultiplatformDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplatformDemo.swift; sourceTree = "<group>"; };
@@ -100,7 +101,8 @@
 		B1741C562589452B0098A2DF /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				B1741C652589452D0098A2DF /* Info.plist */,
+				B15EFA1325EE8A5E0011EB6B /* Info-Debug.plist */,
+				B15EFA1425EE8A5E0011EB6B /* Info-Release.plist */,
 				B1741C602589452D0098A2DF /* Assets.xcassets */,
 				B1741C6D258945840098A2DF /* Core */,
 				B1741C6E2589458B0098A2DF /* Multiplatform */,
@@ -469,7 +471,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iosApp/Info.plist;
+				DEVELOPMENT_TEAM = 57CK5M64R4;
+				INFOPLIST_FILE = "iosApp/Info-$(CONFIGURATION).plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,7 +491,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iosApp/Info.plist;
+				DEVELOPMENT_TEAM = 57CK5M64R4;
+				INFOPLIST_FILE = "iosApp/Info-$(CONFIGURATION).plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

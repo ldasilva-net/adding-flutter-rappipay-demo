@@ -17,7 +17,7 @@ class MultiplatformDemoEngine(private val engineId: String, private val flutterE
     )
 
     private val currentMultiplatformDemoPlugin: MultiplatformDemoPlugin? by lazy {
-        flutterEngine.plugins?.get(MultiplatformDemoPlugin::class.java) as MultiplatformDemoPlugin?
+        flutterEngine.plugins.get(MultiplatformDemoPlugin::class.java) as MultiplatformDemoPlugin?
     }
 
     val router

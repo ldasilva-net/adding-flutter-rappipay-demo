@@ -34,6 +34,7 @@ class TransactionDetailModule extends HookWidget {
           margin:
               const EdgeInsets.only(top: 8, left: 16, right: 16, bottom: 20),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 AppNavBar(

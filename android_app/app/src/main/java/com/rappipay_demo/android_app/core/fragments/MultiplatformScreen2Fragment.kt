@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.rappipay_demo.android_app.core.ToolbarListener
 import com.rappipay_demo.android_app.multiplatform.embedding.MultiplatformDemoFragment
 import com.rappipay_demo.android_app.multiplatform.MultiplatformDemo
@@ -26,7 +27,7 @@ class MultiplatformScreen2Fragment : MultiplatformDemoFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         configureToolbar()
-        configureComponent(RouterArgs(MultiplatformDemoRoutes.HISTORY_PAGE, args = "Back to platform!"))
+        configureComponent(RouterArgs(MultiplatformDemoRoutes.HISTORY_WARMUP_PAGE, args = "Back to platform!"))
     }
 
     private fun configureToolbar() {
@@ -41,7 +42,7 @@ class MultiplatformScreen2Fragment : MultiplatformDemoFragment() {
                 Toast.LENGTH_SHORT
             ).show()
         }
-        activity?.onBackPressed()
+        findNavController().navigateUp()
     }
 
     override fun onDetach() {

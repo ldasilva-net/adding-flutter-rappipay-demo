@@ -18,29 +18,69 @@ class AppRouter {
 
   void _configureRoutes() {
     _router.notFoundHandler = Handler(
-        handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-      //TODO: Handle not found routes
-      return Container();
-    });
-    _router.define(AppRoutes.root, handler: rootHandler);
+      handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+        //TODO: Handle not found routes
+        return Container();
+      },
+    );
 
-    _router.define(AppRoutes.home, handler: homeHandler);
-    _router.define(AppRoutes.homeTransactionHistory,
-        handler: homeTransactionHistoryHandler,
-        transitionType: TransitionType.inFromLeft);
-    _router.define(AppRoutes.homeTransactionDetail,
-        handler: homeTransactionDetailHandler);
+    _router.define(
+      AppRoutes.root,
+      handler: rootHandler,
+      transitionType: TransitionType.none,
+    );
 
-    _router.define(AppRoutes.history,
-        handler: historyHandler, transitionType: TransitionType.inFromLeft);
-    _router.define(AppRoutes.historyDetail, handler: historyDetailHandler);
+    // #region Home
+    _router.define(
+      AppRoutes.home,
+      handler: homeHandler,
+      transitionType: TransitionType.none,
+    );
 
-    _router.define(AppRoutes.partialView1Test,
-        handler: partialView1Handler,
-        transitionType: TransitionType.inFromLeft);
-    _router.define(AppRoutes.partialView2Test,
-        handler: partialView2Handler,
-        transitionType: TransitionType.inFromLeft);
+    _router.define(
+      AppRoutes.homeTransactionHistory,
+      handler: homeTransactionHistoryHandler,
+      transitionType: TransitionType.none,
+    );
+
+    _router.define(
+      AppRoutes.homeTransactionDetail,
+      handler: homeTransactionDetailHandler,
+      transitionType: TransitionType.inFromBottom,
+    );
+    // #endregion
+
+    // #region History
+    _router.define(
+      AppRoutes.historyWarmup,
+      handler: historyWarmupHandler,
+      transitionType: TransitionType.none,
+    );
+    _router.define(
+      AppRoutes.history,
+      handler: historyHandler,
+      transitionType: TransitionType.none,
+    );
+    _router.define(
+      AppRoutes.historyDetail,
+      handler: historyDetailHandler,
+      transitionType: TransitionType.inFromBottom,
+    );
+    // #endregion
+
+    // #region Partial Views
+    _router.define(
+      AppRoutes.partialView1Test,
+      handler: partialView1Handler,
+      transitionType: TransitionType.none,
+    );
+
+    _router.define(
+      AppRoutes.partialView2Test,
+      handler: partialView2Handler,
+      transitionType: TransitionType.none,
+    );
+    // #endregion
   }
 
   Route<dynamic> generateRoutes(RouteSettings routeSettings) =>

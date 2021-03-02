@@ -5,6 +5,7 @@ class AppRoutes {
   static const homeTransactionHistory = '/home/transactionHistory';
   static const homeTransactionDetail = '/home/transactionDetail';
 
+  static const historyWarmup = '/historyWarmup';
   static const history = '/history';
   static const historyDetail = '/history/transactionDetail';
 

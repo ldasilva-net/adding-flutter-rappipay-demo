@@ -30,6 +30,7 @@ class TransactionHistoryModule extends HookWidget {
           margin:
               const EdgeInsets.only(top: 8, left: 16, right: 16, bottom: 20),
           child: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
             slivers: [
               SliverToBoxAdapter(
                 child: AppNavBar(
