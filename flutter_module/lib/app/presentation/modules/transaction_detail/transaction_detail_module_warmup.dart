@@ -38,12 +38,12 @@ class TransactionDetailModuleWarmup extends HookWidget {
         }
       });
 
-      WidgetsBinding.instance.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
         animationController.forward();
       });
 
       return null;
-    }, []);
+    }, const []);
 
     return SlideTransition(
       position: animation,

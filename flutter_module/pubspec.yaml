@@ -36,6 +36,7 @@ flutter:
   uses-material-design: true
 
   assets:
+  - assets/icons/image_icons/rappipay/rappipay_icon.webp
   - assets/icons/image_icons/transaction_default/transaction_default_icon.webp
   - assets/icons/vector_icons/divide_icon.svg
   - assets/icons/vector_icons/more_dots_icon.svg
