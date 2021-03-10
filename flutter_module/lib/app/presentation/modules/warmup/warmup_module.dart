@@ -30,6 +30,10 @@ class WarmupModule extends HookWidget {
       return warmupModuleController.onDispose;
     }, [warmupReady]);
 
+    if (warmupReady) {
+      return Container();
+    }
+
     return Stack(
       children: [
         ...warmupModulesList,
