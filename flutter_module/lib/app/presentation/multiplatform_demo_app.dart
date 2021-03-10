@@ -13,8 +13,7 @@ class MultiplatformDemoApp extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appRouter = useProvider(appRouterProvider);
-    useProvider(platformRepositoryProvider);
+    final appRouter = _startupAppConfig();
 
     return MaterialApp(
       theme: AppTheme.appThemeData,
@@ -22,5 +21,10 @@ class MultiplatformDemoApp extends HookWidget {
       navigatorKey: appRouter.navigatorKey,
       initialRoute: AppRoutes.root,
     );
+  }
+
+  AppRouter _startupAppConfig() {
+    useProvider(platformRepositoryProvider);
+    return useProvider(appRouterProvider);
   }
 }

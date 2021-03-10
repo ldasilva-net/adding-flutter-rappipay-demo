@@ -1,3 +1,4 @@
+import 'package:flutter_module/app/presentation/modules/_base/base_module_scaffold.dart';
 import 'package:flutter_module/app/presentation/modules/test_launcher/test_launcher_module_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -18,7 +19,7 @@ class TestLauncherModule extends HookWidget {
       return testLauncherModuleController.onDispose;
     }, []);
 
-    return Scaffold(
+    return BaseModuleScaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

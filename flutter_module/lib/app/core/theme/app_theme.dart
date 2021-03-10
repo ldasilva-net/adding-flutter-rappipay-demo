@@ -10,4 +10,6 @@ class AppTheme {
     fontFamily: fontPoppins,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
+
+  static const responsiveWrapperWidth = 414.0;
 }

@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_module/app/core/theme/app_color.dart';
 import 'package:flutter_module/app/core/utils/r.dart';
+import 'package:flutter_module/app/presentation/modules/_base/base_module_scaffold.dart';
 import 'package:flutter_module/app/presentation/modules/warmup/warmup_animations_module_providers.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -34,20 +35,22 @@ class WarmupModule extends HookWidget {
       return Container();
     }
 
-    return Stack(
-      children: [
-        ...warmupModulesList,
-        ColoredBox(
-          color: AppColor.whiteTwo,
-          child: Center(
-            child: Image.asset(
-              AppAsset.icons_image_icons_rappipay_rappipay_icon,
-              width: 150,
-              height: 150,
+    return BaseModuleScaffold(
+      body: Stack(
+        children: [
+          ...warmupModulesList,
+          ColoredBox(
+            color: AppColor.whiteTwo,
+            child: Center(
+              child: Image.asset(
+                AppAsset.icons_image_icons_rappipay_rappipay_icon,
+                width: 150,
+                height: 150,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
