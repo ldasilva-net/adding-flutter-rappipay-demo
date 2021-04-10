@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_tag.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_tag.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionTag _$TransactionTagFromJson(Map<String, dynamic> json) {
   return _TransactionTag.fromJson(json);
 }
@@ -16,12 +20,11 @@ TransactionTag _$TransactionTagFromJson(Map<String, dynamic> json) {
 class _$TransactionTagTearOff {
   const _$TransactionTagTearOff();
 
-// ignore: unused_element
   _TransactionTag call(
-      {@JsonKey(name: 'background_color') String backgroundColor,
-      String name,
-      @JsonKey(name: 'text_color') String textColor,
-      String icon}) {
+      {@JsonKey(name: 'background_color') String? backgroundColor,
+      String? name,
+      @JsonKey(name: 'text_color') String? textColor,
+      String? icon}) {
     return _TransactionTag(
       backgroundColor: backgroundColor,
       name: name,
@@ -30,27 +33,27 @@ class _$TransactionTagTearOff {
     );
   }
 
-// ignore: unused_element
   TransactionTag fromJson(Map<String, Object> json) {
     return TransactionTag.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionTag = _$TransactionTagTearOff();
 
 /// @nodoc
 mixin _$TransactionTag {
   @JsonKey(name: 'background_color')
-  String get backgroundColor;
-  String get name;
+  String? get backgroundColor => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'text_color')
-  String get textColor;
-  String get icon;
+  String? get textColor => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $TransactionTagCopyWith<TransactionTag> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransactionTagCopyWith<TransactionTag> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -59,10 +62,10 @@ abstract class $TransactionTagCopyWith<$Res> {
           TransactionTag value, $Res Function(TransactionTag) then) =
       _$TransactionTagCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'background_color') String backgroundColor,
-      String name,
-      @JsonKey(name: 'text_color') String textColor,
-      String icon});
+      {@JsonKey(name: 'background_color') String? backgroundColor,
+      String? name,
+      @JsonKey(name: 'text_color') String? textColor,
+      String? icon});
 }
 
 /// @nodoc
@@ -76,18 +79,28 @@ class _$TransactionTagCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object backgroundColor = freezed,
-    Object name = freezed,
-    Object textColor = freezed,
-    Object icon = freezed,
+    Object? backgroundColor = freezed,
+    Object? name = freezed,
+    Object? textColor = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_value.copyWith(
       backgroundColor: backgroundColor == freezed
           ? _value.backgroundColor
-          : backgroundColor as String,
-      name: name == freezed ? _value.name : name as String,
-      textColor: textColor == freezed ? _value.textColor : textColor as String,
-      icon: icon == freezed ? _value.icon : icon as String,
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor: textColor == freezed
+          ? _value.textColor
+          : textColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -100,10 +113,10 @@ abstract class _$TransactionTagCopyWith<$Res>
       __$TransactionTagCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'background_color') String backgroundColor,
-      String name,
-      @JsonKey(name: 'text_color') String textColor,
-      String icon});
+      {@JsonKey(name: 'background_color') String? backgroundColor,
+      String? name,
+      @JsonKey(name: 'text_color') String? textColor,
+      String? icon});
 }
 
 /// @nodoc
@@ -119,18 +132,28 @@ class __$TransactionTagCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object backgroundColor = freezed,
-    Object name = freezed,
-    Object textColor = freezed,
-    Object icon = freezed,
+    Object? backgroundColor = freezed,
+    Object? name = freezed,
+    Object? textColor = freezed,
+    Object? icon = freezed,
   }) {
     return _then(_TransactionTag(
       backgroundColor: backgroundColor == freezed
           ? _value.backgroundColor
-          : backgroundColor as String,
-      name: name == freezed ? _value.name : name as String,
-      textColor: textColor == freezed ? _value.textColor : textColor as String,
-      icon: icon == freezed ? _value.icon : icon as String,
+          : backgroundColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor: textColor == freezed
+          ? _value.textColor
+          : textColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -152,14 +175,14 @@ class _$_TransactionTag
 
   @override
   @JsonKey(name: 'background_color')
-  final String backgroundColor;
+  final String? backgroundColor;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: 'text_color')
-  final String textColor;
+  final String? textColor;
   @override
-  final String icon;
+  final String? icon;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -201,6 +224,7 @@ class _$_TransactionTag
       const DeepCollectionEquality().hash(textColor) ^
       const DeepCollectionEquality().hash(icon);
 
+  @JsonKey(ignore: true)
   @override
   _$TransactionTagCopyWith<_TransactionTag> get copyWith =>
       __$TransactionTagCopyWithImpl<_TransactionTag>(this, _$identity);
@@ -213,24 +237,26 @@ class _$_TransactionTag
 
 abstract class _TransactionTag implements TransactionTag {
   factory _TransactionTag(
-      {@JsonKey(name: 'background_color') String backgroundColor,
-      String name,
-      @JsonKey(name: 'text_color') String textColor,
-      String icon}) = _$_TransactionTag;
+      {@JsonKey(name: 'background_color') String? backgroundColor,
+      String? name,
+      @JsonKey(name: 'text_color') String? textColor,
+      String? icon}) = _$_TransactionTag;
 
   factory _TransactionTag.fromJson(Map<String, dynamic> json) =
       _$_TransactionTag.fromJson;
 
   @override
   @JsonKey(name: 'background_color')
-  String get backgroundColor;
+  String? get backgroundColor => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'text_color')
-  String get textColor;
+  String? get textColor => throw _privateConstructorUsedError;
   @override
-  String get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  _$TransactionTagCopyWith<_TransactionTag> get copyWith;
+  @JsonKey(ignore: true)
+  _$TransactionTagCopyWith<_TransactionTag> get copyWith =>
+      throw _privateConstructorUsedError;
 }

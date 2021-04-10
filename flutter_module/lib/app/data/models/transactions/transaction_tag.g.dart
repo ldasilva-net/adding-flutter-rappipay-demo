@@ -8,10 +8,10 @@ part of 'transaction_tag.dart';
 
 _$_TransactionTag _$_$_TransactionTagFromJson(Map<String, dynamic> json) {
   return _$_TransactionTag(
-    backgroundColor: json['background_color'] as String,
-    name: json['name'] as String,
-    textColor: json['text_color'] as String,
-    icon: json['icon'] as String,
+    backgroundColor: json['background_color'] as String?,
+    name: json['name'] as String?,
+    textColor: json['text_color'] as String?,
+    icon: json['icon'] as String?,
   );
 }
 

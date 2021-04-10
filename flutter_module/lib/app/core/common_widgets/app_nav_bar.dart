@@ -6,9 +6,8 @@ class AppNavBar extends StatelessWidget {
   final VoidCallback onTapBack;
 
   const AppNavBar({
-    Key key,
-    @required this.onTapBack,
-  }) : super(key: key);
+    required this.onTapBack,
+  }) : super();
 
   @override
   Widget build(BuildContext context) {

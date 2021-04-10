@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomeTransactionHistoryScreen extends HookWidget {
-  const HomeTransactionHistoryScreen({Key key}) : super(key: key);
+  const HomeTransactionHistoryScreen() : super();
 
   @override
   Widget build(BuildContext context) {

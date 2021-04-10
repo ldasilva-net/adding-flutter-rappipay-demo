@@ -9,8 +9,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HistoryDetailScreen extends HookWidget {
   final Transaction currentTransaction;
-  const HistoryDetailScreen(this.currentTransaction, {Key key})
-      : super(key: key);
+  const HistoryDetailScreen(this.currentTransaction) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -9,10 +9,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class WarmupModule extends HookWidget {
   final List<Widget> warmupModulesList;
 
-  const WarmupModule({
-    Key key,
-    @required this.warmupModulesList,
-  }) : super(key: key);
+  const WarmupModule({required this.warmupModulesList}) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +19,7 @@ class WarmupModule extends HookWidget {
     useEffect(() {
       warmupModuleController.onInit();
 
-      WidgetsBinding.instance.addPostFrameCallback((_) {
+      WidgetsBinding.instance?.addPostFrameCallback((_) {
         if (warmupReady) {
           warmupModuleController.onComplete();
         }

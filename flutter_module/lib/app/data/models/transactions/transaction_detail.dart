@@ -5,10 +5,10 @@ part 'transaction_detail.freezed.dart';
 part 'transaction_detail.g.dart';
 
 @freezed
-abstract class TransactionDetail with _$TransactionDetail {
+class TransactionDetail with _$TransactionDetail {
   factory TransactionDetail({
-    String key,
-    String value,
+    required String key,
+    required String value,
   }) = _TransactionDetail;
 
   factory TransactionDetail.fromJson(Map<String, dynamic> json) =>

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_detail.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_detail.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionDetail _$TransactionDetailFromJson(Map<String, dynamic> json) {
   return _TransactionDetail.fromJson(json);
 }
@@ -16,31 +20,30 @@ TransactionDetail _$TransactionDetailFromJson(Map<String, dynamic> json) {
 class _$TransactionDetailTearOff {
   const _$TransactionDetailTearOff();
 
-// ignore: unused_element
-  _TransactionDetail call({String key, String value}) {
+  _TransactionDetail call({required String key, required String value}) {
     return _TransactionDetail(
       key: key,
       value: value,
     );
   }
 
-// ignore: unused_element
   TransactionDetail fromJson(Map<String, Object> json) {
     return TransactionDetail.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionDetail = _$TransactionDetailTearOff();
 
 /// @nodoc
 mixin _$TransactionDetail {
-  String get key;
-  String get value;
+  String get key => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $TransactionDetailCopyWith<TransactionDetail> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransactionDetailCopyWith<TransactionDetail> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -62,12 +65,18 @@ class _$TransactionDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object key = freezed,
-    Object value = freezed,
+    Object? key = freezed,
+    Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      key: key == freezed ? _value.key : key as String,
-      value: value == freezed ? _value.value : value as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -95,12 +104,18 @@ class __$TransactionDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object key = freezed,
-    Object value = freezed,
+    Object? key = freezed,
+    Object? value = freezed,
   }) {
     return _then(_TransactionDetail(
-      key: key == freezed ? _value.key : key as String,
-      value: value == freezed ? _value.value : value as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -111,7 +126,7 @@ class __$TransactionDetailCopyWithImpl<$Res>
 class _$_TransactionDetail
     with DiagnosticableTreeMixin
     implements _TransactionDetail {
-  _$_TransactionDetail({this.key, this.value});
+  _$_TransactionDetail({required this.key, required this.value});
 
   factory _$_TransactionDetail.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionDetailFromJson(json);
@@ -151,6 +166,7 @@ class _$_TransactionDetail
       const DeepCollectionEquality().hash(key) ^
       const DeepCollectionEquality().hash(value);
 
+  @JsonKey(ignore: true)
   @override
   _$TransactionDetailCopyWith<_TransactionDetail> get copyWith =>
       __$TransactionDetailCopyWithImpl<_TransactionDetail>(this, _$identity);
@@ -162,15 +178,18 @@ class _$_TransactionDetail
 }
 
 abstract class _TransactionDetail implements TransactionDetail {
-  factory _TransactionDetail({String key, String value}) = _$_TransactionDetail;
+  factory _TransactionDetail({required String key, required String value}) =
+      _$_TransactionDetail;
 
   factory _TransactionDetail.fromJson(Map<String, dynamic> json) =
       _$_TransactionDetail.fromJson;
 
   @override
-  String get key;
+  String get key => throw _privateConstructorUsedError;
   @override
-  String get value;
+  String get value => throw _privateConstructorUsedError;
   @override
-  _$TransactionDetailCopyWith<_TransactionDetail> get copyWith;
+  @JsonKey(ignore: true)
+  _$TransactionDetailCopyWith<_TransactionDetail> get copyWith =>
+      throw _privateConstructorUsedError;
 }

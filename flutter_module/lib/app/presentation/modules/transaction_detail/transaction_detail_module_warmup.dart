@@ -7,11 +7,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'transaction_detail_module_providers.dart';
 
 class TransactionDetailModuleWarmup extends HookWidget {
-  const TransactionDetailModuleWarmup({Key key}) : super(key: key);
+  const TransactionDetailModuleWarmup() : super();
 
   @override
   Widget build(BuildContext context) {
-    Animation<Offset> animation;
+    late Animation<Offset> animation;
     int repeat = 3;
 
     final warmupReady = useProvider(transactionDetailModuleWarmupReadyProvider);
@@ -38,7 +38,7 @@ class TransactionDetailModuleWarmup extends HookWidget {
         }
       });
 
-      WidgetsBinding.instance.addPostFrameCallback((_) async {
+      WidgetsBinding.instance?.addPostFrameCallback((_) async {
         animationController.forward();
       });
 
@@ -47,29 +47,15 @@ class TransactionDetailModuleWarmup extends HookWidget {
 
     return SlideTransition(
       position: animation,
-      child: _DummyTransactionDetail(),
+      child: TransactionDetailWidget(
+        currentTransaction: dummyTransaction,
+        transactionDetailActions: _DummyTransactionDetailActions(),
+      ),
     );
   }
 }
 
-class _DummyTransactionDetail extends HookWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ProviderScope(
-      overrides: [
-        transactionDetailModuleControllerProvider.overrideWithValue(
-          _DummyHistoryDetailController(),
-        ),
-        currentTransactionProvider.overrideWithValue(dummyTransaction),
-      ],
-      child: const TransactionDetailModule(),
-    );
-  }
-}
-
-class _DummyHistoryDetailController extends TransactionDetailModuleController {
-  _DummyHistoryDetailController() : super(appRouter: null);
-
+class _DummyTransactionDetailActions extends TransactionDetailActions {
   @override
   void onCallSupport() {}
 
@@ -81,4 +67,7 @@ class _DummyHistoryDetailController extends TransactionDetailModuleController {
 
   @override
   void onMoreOptions() {}
+
+  @override
+  void onBackPressed() {}
 }

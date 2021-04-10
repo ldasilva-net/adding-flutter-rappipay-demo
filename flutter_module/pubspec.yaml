@@ -4,34 +4,32 @@ description: A new flutter module project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.10.0 <3.0.0'
-  flutter: 1.22.6
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: 2.0.4
 
 dependencies:
+  fluro: ^2.0.3    
   flutter:
-    sdk: flutter  
-  hooks_riverpod: 0.12.1
-  flutter_hooks: 0.14.1
-  freezed_annotation: 0.12.0
-  font_awesome_flutter: 8.10.0
-  shimmer: 1.1.2
-  supercharged: 1.11.1
-  fluro: 1.7.7
-  flutter_svg: 0.19.1
-  logger: 0.9.4
-  responsive_framework: 0.0.15
-
-  cupertino_icons: ^1.0.0
-
+    sdk: flutter
+  flutter_hooks: ^0.16.0
+  flutter_svg: ^0.21.0-nullsafety.1  
+  font_awesome_flutter: ^9.0.0
+  freezed_annotation: ^0.14.1
+  hooks_riverpod: ^0.14.0+1
+  logger: ^1.0.0
+  responsive_framework: ^0.1.0
+  shimmer: ^2.0.0-nullsafety.0
+  supercharged: ^2.0.0
+  
 dev_dependencies:
+  assets_scanner: ^2.0.0
+  build_runner: ^1.12.2
   flutter_test:
     sdk: flutter
-  freezed: 0.12.2
-  mockito: 4.1.3
-  build_runner: 1.10.4
-  json_serializable: 3.5.0
-  lint: 1.3.0
-  assets_scanner: 1.1.2
+  freezed: ^0.14.1+2
+  json_serializable: ^4.1.0
+  lint: ^1.5.3
+  mocktail: ^0.1.1
 
 flutter:  
   uses-material-design: true

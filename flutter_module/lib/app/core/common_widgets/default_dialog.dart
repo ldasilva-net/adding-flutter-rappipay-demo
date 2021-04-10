@@ -6,10 +6,11 @@ class DefaultDialog extends StatelessWidget {
   final String message;
   final VoidCallback gotIt;
 
-  const DefaultDialog({Key key, this.title, this.message, this.gotIt})
-      : super(
-          key: key,
-        );
+  const DefaultDialog({
+    required this.title,
+    required this.message,
+    required this.gotIt,
+  }) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class DefaultDialog extends StatelessWidget {
       ),
       content: Text(message),
       actions: <Widget>[
-        FlatButton(
+        TextButton(
           onPressed: () => gotIt(),
           child: const Text('Got it!'),
         )

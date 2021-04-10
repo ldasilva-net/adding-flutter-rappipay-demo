@@ -1,9 +1,9 @@
-extension StringUtil on String {
+extension StringExtensions on String? {
   String defaultString({String defaultStr = ''}) => this ?? defaultStr;
 
   bool isNullOrEmpty() {
     final s = this;
-    if (s == null || isEmpty) {
+    if (s == null || s.isEmpty) {
       return true;
     } else {
       return false;

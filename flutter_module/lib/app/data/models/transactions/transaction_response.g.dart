@@ -10,10 +10,9 @@ _$_TransactionsResponse _$_$_TransactionsResponseFromJson(
     Map<String, dynamic> json) {
   return _$_TransactionsResponse(
     totalPages: json['total_pages'] as int,
-    transactions: (json['content'] as List)
-        ?.map((e) =>
-            e == null ? null : Transaction.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    transactions: (json['content'] as List<dynamic>)
+        .map((e) => Transaction.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 

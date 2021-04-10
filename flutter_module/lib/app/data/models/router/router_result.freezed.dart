@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'router_result.dart';
 
@@ -8,6 +8,10 @@ part of 'router_result.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 RouterResult _$RouterResultFromJson(Map<String, dynamic> json) {
   return _RouterResult.fromJson(json);
 }
@@ -16,29 +20,28 @@ RouterResult _$RouterResultFromJson(Map<String, dynamic> json) {
 class _$RouterResultTearOff {
   const _$RouterResultTearOff();
 
-// ignore: unused_element
-  _RouterResult call({String result}) {
+  _RouterResult call({required String result}) {
     return _RouterResult(
       result: result,
     );
   }
 
-// ignore: unused_element
   RouterResult fromJson(Map<String, Object> json) {
     return RouterResult.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $RouterResult = _$RouterResultTearOff();
 
 /// @nodoc
 mixin _$RouterResult {
-  String get result;
+  String get result => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $RouterResultCopyWith<RouterResult> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RouterResultCopyWith<RouterResult> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -59,10 +62,13 @@ class _$RouterResultCopyWithImpl<$Res> implements $RouterResultCopyWith<$Res> {
 
   @override
   $Res call({
-    Object result = freezed,
+    Object? result = freezed,
   }) {
     return _then(_value.copyWith(
-      result: result == freezed ? _value.result : result as String,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -89,10 +95,13 @@ class __$RouterResultCopyWithImpl<$Res> extends _$RouterResultCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object result = freezed,
+    Object? result = freezed,
   }) {
     return _then(_RouterResult(
-      result: result == freezed ? _value.result : result as String,
+      result: result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -101,7 +110,7 @@ class __$RouterResultCopyWithImpl<$Res> extends _$RouterResultCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_RouterResult with DiagnosticableTreeMixin implements _RouterResult {
-  _$_RouterResult({this.result});
+  _$_RouterResult({required this.result});
 
   factory _$_RouterResult.fromJson(Map<String, dynamic> json) =>
       _$_$_RouterResultFromJson(json);
@@ -134,6 +143,7 @@ class _$_RouterResult with DiagnosticableTreeMixin implements _RouterResult {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(result);
 
+  @JsonKey(ignore: true)
   @override
   _$RouterResultCopyWith<_RouterResult> get copyWith =>
       __$RouterResultCopyWithImpl<_RouterResult>(this, _$identity);
@@ -145,13 +155,15 @@ class _$_RouterResult with DiagnosticableTreeMixin implements _RouterResult {
 }
 
 abstract class _RouterResult implements RouterResult {
-  factory _RouterResult({String result}) = _$_RouterResult;
+  factory _RouterResult({required String result}) = _$_RouterResult;
 
   factory _RouterResult.fromJson(Map<String, dynamic> json) =
       _$_RouterResult.fromJson;
 
   @override
-  String get result;
+  String get result => throw _privateConstructorUsedError;
   @override
-  _$RouterResultCopyWith<_RouterResult> get copyWith;
+  @JsonKey(ignore: true)
+  _$RouterResultCopyWith<_RouterResult> get copyWith =>
+      throw _privateConstructorUsedError;
 }

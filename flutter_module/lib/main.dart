@@ -4,19 +4,25 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(ProviderScope(
-      observers: [LoggerObserver()], child: const MultiplatformDemoApp()));
+  runApp(
+    ProviderScope(
+      observers: [_LoggerObserver()],
+      child: const MultiplatformDemoApp(),
+    ),
+  );
 }
 
-class LoggerObserver extends ProviderObserver {
+class _LoggerObserver extends ProviderObserver {
+  /*
   @override
-  void didUpdateProvider(ProviderBase provider, Object newValue) {
-    /*
+  void didUpdateProvider(ProviderBase provider, Object? newValue) {    
     print('''
       {
         "provider": "${provider.name ?? provider.runtimeType}",
         "newValue": "$newValue"
       }''');
-    */
+    
+    super.didUpdateProvider(provider, newValue);
   }
+  */
 }

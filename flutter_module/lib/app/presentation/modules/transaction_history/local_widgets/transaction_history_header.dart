@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TransactionHistoryHeader extends StatelessWidget {
-  const TransactionHistoryHeader({Key key}) : super(key: key);
+  const TransactionHistoryHeader() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ class TransactionHistoryHeader extends StatelessWidget {
   }
 
   Expanded _headerTile(
-      {@required String headerTitle,
-      @required IconData iconData,
-      @required bool isSelected}) {
+      {required String headerTitle,
+      required IconData iconData,
+      required bool isSelected}) {
     var borderDecoration = const BoxDecoration(
         border: Border(
       bottom: BorderSide(color: AppColor.rappi, width: 2),

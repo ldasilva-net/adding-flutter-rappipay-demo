@@ -9,9 +9,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TransactionHistoryModule extends HookWidget {
-  const TransactionHistoryModule({
-    Key key,
-  }) : super(key: key);
+  const TransactionHistoryModule() : super();
 
   @override
   Widget build(BuildContext context) {

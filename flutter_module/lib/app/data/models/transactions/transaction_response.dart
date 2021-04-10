@@ -6,10 +6,10 @@ part 'transaction_response.freezed.dart';
 part 'transaction_response.g.dart';
 
 @freezed
-abstract class TransactionResponse with _$TransactionResponse {
+class TransactionResponse with _$TransactionResponse {
   factory TransactionResponse({
-    @JsonKey(name: 'total_pages') int totalPages,
-    @JsonKey(name: 'content') List<Transaction> transactions,
+    @JsonKey(name: 'total_pages') required int totalPages,
+    @JsonKey(name: 'content') required List<Transaction> transactions,
   }) = _TransactionsResponse;
 
   factory TransactionResponse.fromJson(Map<String, dynamic> json) =>

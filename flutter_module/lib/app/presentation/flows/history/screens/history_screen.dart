@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HistoryScreen extends HookWidget {
-  const HistoryScreen({Key key}) : super(key: key);
+  const HistoryScreen() : super();
 
   @override
   Widget build(BuildContext context) {

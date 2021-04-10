@@ -4,12 +4,10 @@ import 'package:flutter_module/app/core/routing/app_routes.dart';
 import 'package:flutter_module/app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_module/app/data/repositories/platform/platform_repository_provider.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class MultiplatformDemoApp extends HookWidget {
-  const MultiplatformDemoApp({
-    Key key,
-  }) : super(key: key);
+  const MultiplatformDemoApp() : super();
 
   @override
   Widget build(BuildContext context) {

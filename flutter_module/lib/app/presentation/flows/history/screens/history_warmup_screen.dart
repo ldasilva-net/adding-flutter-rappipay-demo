@@ -6,10 +6,10 @@ import 'package:flutter_module/app/presentation/modules/transaction_detail/trans
 import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_warmup.dart';
 import 'package:flutter_module/app/presentation/modules/warmup/warmup_animations_module_providers.dart';
 import 'package:flutter_module/app/presentation/modules/warmup/warmup_module.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HistoryWarmupScreen extends HookWidget {
-  const HistoryWarmupScreen({Key key}) : super(key: key);
+  const HistoryWarmupScreen() : super();
 
   @override
   Widget build(BuildContext context) {

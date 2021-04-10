@@ -5,10 +5,7 @@ import 'package:shimmer/shimmer.dart';
 class AppShimmer extends StatelessWidget {
   final Widget child;
 
-  const AppShimmer({Key key, this.child})
-      : super(
-          key: key,
-        );
+  const AppShimmer({required this.child}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -14,15 +14,11 @@ import 'package:flutter_module/app/core/utils/scope_function.dart';
 import 'package:flutter_module/app/core/utils/string_utils.dart';
 
 class TransactionTile extends HookWidget {
-  const TransactionTile({Key key}) : super(key: key);
+  const TransactionTile() : super();
 
   @override
   Widget build(BuildContext context) {
     final index = useProvider(transactionItemIndexProvider);
-    assert(
-      index != null,
-      'TransactionTile cannot be used but _transactionIndex is undefined',
-    );
 
     final transactionHistoryModuleController =
         useProvider(transactionHistoryModuleControllerProvider);
@@ -128,52 +124,46 @@ class TransactionTile extends HookWidget {
   }
 
   Widget _getTagWidget(TransactionTag tag) {
-    return tag?.let((it) {
-      if (it.icon.isNotNullOrEmpty()) {
-        return Container(
-          margin: const EdgeInsets.only(top: 6),
-          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
-          decoration: BoxDecoration(
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
-            color: (it.backgroundColor.isNotNullOrEmpty())
-                ? it.backgroundColor.toColor()
-                : AppColor.obscure,
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                it.name.defaultString(),
-                style: AppTextTheme.regularText.copyWith(color: AppColor.white),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 3),
-                child: SvgPicture.network(
-                  it.icon,
-                  width: 18,
-                  height: 18,
-                ),
-              )
-            ],
-          ),
-        );
-      } else {
-        if (it.name.isNotNullOrEmpty()) {
-          return Container(
-            margin: const EdgeInsets.only(top: 6),
-            child: Text(
-              it.name,
-              style: AppTextTheme.regularText.copyWith(
-                color: (it.textColor.isNotNullOrEmpty())
-                    ? it.textColor.toColor()
-                    : AppColor.disabled,
-              ),
+    tag.icon?.let((it) {
+      return Container(
+        margin: const EdgeInsets.only(top: 6),
+        padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          color: tag.backgroundColor?.toColor() ?? AppColor.obscure,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              tag.name.defaultString(),
+              style: AppTextTheme.regularText.copyWith(color: AppColor.white),
             ),
-          );
-        }
-      }
-
-      return const SizedBox();
+            Padding(
+              padding: const EdgeInsets.only(left: 3),
+              child: SvgPicture.network(
+                it,
+                width: 18,
+                height: 18,
+              ),
+            )
+          ],
+        ),
+      );
     });
+
+    tag.name?.let((it) {
+      return Container(
+        margin: const EdgeInsets.only(top: 6),
+        child: Text(
+          it,
+          style: AppTextTheme.regularText.copyWith(
+            color: tag.textColor?.toColor() ?? AppColor.disabled,
+          ),
+        ),
+      );
+    });
+
+    return const SizedBox();
   }
 }

@@ -6,18 +6,18 @@ part 'transaction.freezed.dart';
 part 'transaction.g.dart';
 
 @freezed
-abstract class Transaction with _$Transaction {
+class Transaction with _$Transaction {
   factory Transaction({
-    String title,
-    String description,
-    String amount,
-    String image,
-    String icon,
-    TransactionTag tag,
-    String action,
-    @JsonKey(name: 'action_detail') String actionDetail,
-    String date,
-    @JsonKey(name: 'transaction_id') String transactionId,
+    required String title,
+    String? description,
+    required String amount,
+    required String image,
+    required String icon,
+    required TransactionTag tag,
+    required String action,
+    @JsonKey(name: 'action_detail') String? actionDetail,
+    required String date,
+    @JsonKey(name: 'transaction_id') required String transactionId,
   }) = _Transaction;
 
   factory Transaction.fromJson(Map<String, dynamic> json) =>

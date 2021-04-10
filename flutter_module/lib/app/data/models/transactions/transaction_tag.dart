@@ -5,12 +5,12 @@ part 'transaction_tag.freezed.dart';
 part 'transaction_tag.g.dart';
 
 @freezed
-abstract class TransactionTag with _$TransactionTag {
+class TransactionTag with _$TransactionTag {
   factory TransactionTag({
-    @JsonKey(name: 'background_color') String backgroundColor,
-    String name,
-    @JsonKey(name: 'text_color') String textColor,
-    String icon,
+    @JsonKey(name: 'background_color') String? backgroundColor,
+    String? name,
+    @JsonKey(name: 'text_color') String? textColor,
+    String? icon,
   }) = _TransactionTag;
 
   factory TransactionTag.fromJson(Map<String, dynamic> json) =>

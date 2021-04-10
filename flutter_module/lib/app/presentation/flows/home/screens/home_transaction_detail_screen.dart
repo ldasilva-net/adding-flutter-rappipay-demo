@@ -9,8 +9,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomeTransactionDetailScreen extends HookWidget {
   final Transaction currentTransaction;
-  const HomeTransactionDetailScreen(this.currentTransaction, {Key key})
-      : super(key: key);
+  const HomeTransactionDetailScreen(this.currentTransaction) : super();
 
   @override
   Widget build(BuildContext context) {

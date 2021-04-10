@@ -16,9 +16,11 @@ class AppRouter {
     _configureRoutes();
   }
 
+  BuildContext getNavigatorContext() => navigatorKey.currentContext!;
+
   void _configureRoutes() {
     _router.notFoundHandler = Handler(
-      handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      handlerFunc: (context, params) {
         //TODO: Handle not found routes
         return Container();
       },
@@ -84,15 +86,15 @@ class AppRouter {
   }
 
   Route<dynamic> generateRoutes(RouteSettings routeSettings) =>
-      _router.generator(routeSettings);
+      _router.generator(routeSettings)!;
 
   void navigateTo(String page,
-      {Object argument,
+      {Object? argument,
       bool replace = false,
       bool clearStack = false,
-      TransitionType transition}) {
+      TransitionType? transition}) {
     _router.navigateTo(
-      navigatorKey.currentContext,
+      getNavigatorContext(),
       page,
       routeSettings: RouteSettings(
         arguments: argument,
@@ -104,12 +106,12 @@ class AppRouter {
   }
 
   void navigateBack() {
-    _router.pop(navigatorKey.currentContext);
+    _router.pop(getNavigatorContext());
   }
 
   void showInfoMessage(String title, String message) {
     showDialog(
-      context: navigatorKey.currentContext,
+      context: getNavigatorContext(),
       builder: (_) => DefaultDialog(
         title: title,
         message: message,

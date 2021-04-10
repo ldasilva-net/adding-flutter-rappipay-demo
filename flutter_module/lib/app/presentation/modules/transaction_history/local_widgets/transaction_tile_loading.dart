@@ -3,9 +3,7 @@ import 'package:flutter_module/app/core/common_widgets/app_shimmer.dart';
 import 'package:flutter/material.dart';
 
 class TransactionTileLoading extends StatelessWidget {
-  const TransactionTileLoading({
-    Key key,
-  }) : super(key: key);
+  const TransactionTileLoading() : super();
 
   @override
   Widget build(BuildContext context) {

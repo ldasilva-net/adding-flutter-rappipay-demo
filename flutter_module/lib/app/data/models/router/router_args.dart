@@ -5,12 +5,12 @@ part 'router_args.freezed.dart';
 part 'router_args.g.dart';
 
 @freezed
-abstract class RouterArgs with _$RouterArgs {
+class RouterArgs with _$RouterArgs {
   factory RouterArgs({
-    String path,
-    bool replace,
-    bool clearStack,
-    String args,
+    required String path,
+    @Default(false) bool replace,
+    @Default(false) bool clearStack,
+    String? args,
   }) = _RouterArgs;
 
   factory RouterArgs.fromJson(Map<String, dynamic> json) =>

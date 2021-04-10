@@ -5,9 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TestLauncherModule extends HookWidget {
-  const TestLauncherModule({
-    Key key,
-  }) : super(key: key);
+  const TestLauncherModule() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,7 @@ class TestLauncherModule extends HookWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            ElevatedButton(
               onPressed: () => testLauncherModuleController.launchSomething(),
               child: Text(
                 testLauncherModuleController.launchTitle,

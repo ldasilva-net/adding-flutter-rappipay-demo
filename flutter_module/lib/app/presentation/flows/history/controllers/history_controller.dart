@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter_module/app/core/routing/app_routes.dart';
 import 'package:flutter_module/app/data/models/router/router_result.dart';
@@ -9,11 +8,14 @@ import 'package:flutter_module/app/presentation/modules/transaction_history/tran
 class HistoryController extends TransactionHistoryModuleController {
   final PlatformRepository _platformRepository;
 
+  @override
+  final AppRouter appRouter;
+
   HistoryController({
-    @required PlatformRepository platformRepository,
-    @required AppRouter appRouter,
-  })  : _platformRepository = platformRepository,
-        super(appRouter: appRouter);
+    required PlatformRepository platformRepository,
+    required this.appRouter,
+  })   : _platformRepository = platformRepository,
+        super();
 
   @override
   void onTransactionSelected(Transaction transaction) {

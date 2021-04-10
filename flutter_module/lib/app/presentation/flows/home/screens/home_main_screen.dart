@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomeMainScreen extends HookWidget {
-  const HomeMainScreen({Key key}) : super(key: key);
+  const HomeMainScreen() : super();
 
   @override
   Widget build(BuildContext context) {

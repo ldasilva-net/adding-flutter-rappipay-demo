@@ -4,12 +4,12 @@ import 'package:flutter_module/app/core/theme/app_text_theme.dart';
 import 'package:flutter_module/app/data/models/transactions/transaction.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_providers.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class TransactionDetailList extends HookWidget {
   final Transaction transaction;
 
-  const TransactionDetailList({Key key, this.transaction}) : super(key: key);
+  const TransactionDetailList({required this.transaction}) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +46,7 @@ class TransactionDetailList extends HookWidget {
     );
   }
 
-  Widget _detailTileWidget(
-      {@required Widget title, @required Widget trailing}) {
+  Widget _detailTileWidget({required Widget title, required Widget trailing}) {
     return Column(
       children: [
         ListTile(

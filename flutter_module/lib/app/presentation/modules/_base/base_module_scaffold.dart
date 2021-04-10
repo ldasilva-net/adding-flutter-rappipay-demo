@@ -6,7 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 class BaseModuleScaffold extends StatelessWidget {
   final Widget body;
 
-  const BaseModuleScaffold({this.body});
+  const BaseModuleScaffold({required this.body});
 
   @override
   Widget build(BuildContext context) {

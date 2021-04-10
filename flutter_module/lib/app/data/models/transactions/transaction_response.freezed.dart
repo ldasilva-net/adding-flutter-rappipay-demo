@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_response.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction_response.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 TransactionResponse _$TransactionResponseFromJson(Map<String, dynamic> json) {
   return _TransactionsResponse.fromJson(json);
 }
@@ -16,35 +20,34 @@ TransactionResponse _$TransactionResponseFromJson(Map<String, dynamic> json) {
 class _$TransactionResponseTearOff {
   const _$TransactionResponseTearOff();
 
-// ignore: unused_element
   _TransactionsResponse call(
-      {@JsonKey(name: 'total_pages') int totalPages,
-      @JsonKey(name: 'content') List<Transaction> transactions}) {
+      {@JsonKey(name: 'total_pages') required int totalPages,
+      @JsonKey(name: 'content') required List<Transaction> transactions}) {
     return _TransactionsResponse(
       totalPages: totalPages,
       transactions: transactions,
     );
   }
 
-// ignore: unused_element
   TransactionResponse fromJson(Map<String, Object> json) {
     return TransactionResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionResponse = _$TransactionResponseTearOff();
 
 /// @nodoc
 mixin _$TransactionResponse {
   @JsonKey(name: 'total_pages')
-  int get totalPages;
+  int get totalPages => throw _privateConstructorUsedError;
   @JsonKey(name: 'content')
-  List<Transaction> get transactions;
+  List<Transaction> get transactions => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $TransactionResponseCopyWith<TransactionResponse> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransactionResponseCopyWith<TransactionResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -68,14 +71,18 @@ class _$TransactionResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object totalPages = freezed,
-    Object transactions = freezed,
+    Object? totalPages = freezed,
+    Object? transactions = freezed,
   }) {
     return _then(_value.copyWith(
-      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
+      totalPages: totalPages == freezed
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
       transactions: transactions == freezed
           ? _value.transactions
-          : transactions as List<Transaction>,
+          : transactions // ignore: cast_nullable_to_non_nullable
+              as List<Transaction>,
     ));
   }
 }
@@ -105,14 +112,18 @@ class __$TransactionsResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object totalPages = freezed,
-    Object transactions = freezed,
+    Object? totalPages = freezed,
+    Object? transactions = freezed,
   }) {
     return _then(_TransactionsResponse(
-      totalPages: totalPages == freezed ? _value.totalPages : totalPages as int,
+      totalPages: totalPages == freezed
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
       transactions: transactions == freezed
           ? _value.transactions
-          : transactions as List<Transaction>,
+          : transactions // ignore: cast_nullable_to_non_nullable
+              as List<Transaction>,
     ));
   }
 }
@@ -124,8 +135,8 @@ class _$_TransactionsResponse
     with DiagnosticableTreeMixin
     implements _TransactionsResponse {
   _$_TransactionsResponse(
-      {@JsonKey(name: 'total_pages') this.totalPages,
-      @JsonKey(name: 'content') this.transactions});
+      {@JsonKey(name: 'total_pages') required this.totalPages,
+      @JsonKey(name: 'content') required this.transactions});
 
   factory _$_TransactionsResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionsResponseFromJson(json);
@@ -169,6 +180,7 @@ class _$_TransactionsResponse
       const DeepCollectionEquality().hash(totalPages) ^
       const DeepCollectionEquality().hash(transactions);
 
+  @JsonKey(ignore: true)
   @override
   _$TransactionsResponseCopyWith<_TransactionsResponse> get copyWith =>
       __$TransactionsResponseCopyWithImpl<_TransactionsResponse>(
@@ -182,8 +194,8 @@ class _$_TransactionsResponse
 
 abstract class _TransactionsResponse implements TransactionResponse {
   factory _TransactionsResponse(
-          {@JsonKey(name: 'total_pages') int totalPages,
-          @JsonKey(name: 'content') List<Transaction> transactions}) =
+          {@JsonKey(name: 'total_pages') required int totalPages,
+          @JsonKey(name: 'content') required List<Transaction> transactions}) =
       _$_TransactionsResponse;
 
   factory _TransactionsResponse.fromJson(Map<String, dynamic> json) =
@@ -191,10 +203,12 @@ abstract class _TransactionsResponse implements TransactionResponse {
 
   @override
   @JsonKey(name: 'total_pages')
-  int get totalPages;
+  int get totalPages => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'content')
-  List<Transaction> get transactions;
+  List<Transaction> get transactions => throw _privateConstructorUsedError;
   @override
-  _$TransactionsResponseCopyWith<_TransactionsResponse> get copyWith;
+  @JsonKey(ignore: true)
+  _$TransactionsResponseCopyWith<_TransactionsResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction.dart';
 
@@ -8,6 +8,10 @@ part of 'transaction.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Transaction _$TransactionFromJson(Map<String, dynamic> json) {
   return _Transaction.fromJson(json);
 }
@@ -16,18 +20,17 @@ Transaction _$TransactionFromJson(Map<String, dynamic> json) {
 class _$TransactionTearOff {
   const _$TransactionTearOff();
 
-// ignore: unused_element
   _Transaction call(
-      {String title,
-      String description,
-      String amount,
-      String image,
-      String icon,
-      TransactionTag tag,
-      String action,
-      @JsonKey(name: 'action_detail') String actionDetail,
-      String date,
-      @JsonKey(name: 'transaction_id') String transactionId}) {
+      {required String title,
+      String? description,
+      required String amount,
+      required String image,
+      required String icon,
+      required TransactionTag tag,
+      required String action,
+      @JsonKey(name: 'action_detail') String? actionDetail,
+      required String date,
+      @JsonKey(name: 'transaction_id') required String transactionId}) {
     return _Transaction(
       title: title,
       description: description,
@@ -42,33 +45,33 @@ class _$TransactionTearOff {
     );
   }
 
-// ignore: unused_element
   Transaction fromJson(Map<String, Object> json) {
     return Transaction.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Transaction = _$TransactionTearOff();
 
 /// @nodoc
 mixin _$Transaction {
-  String get title;
-  String get description;
-  String get amount;
-  String get image;
-  String get icon;
-  TransactionTag get tag;
-  String get action;
+  String get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  String get amount => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
+  String get icon => throw _privateConstructorUsedError;
+  TransactionTag get tag => throw _privateConstructorUsedError;
+  String get action => throw _privateConstructorUsedError;
   @JsonKey(name: 'action_detail')
-  String get actionDetail;
-  String get date;
+  String? get actionDetail => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'transaction_id')
-  String get transactionId;
+  String get transactionId => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $TransactionCopyWith<Transaction> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransactionCopyWith<Transaction> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -78,13 +81,13 @@ abstract class $TransactionCopyWith<$Res> {
       _$TransactionCopyWithImpl<$Res>;
   $Res call(
       {String title,
-      String description,
+      String? description,
       String amount,
       String image,
       String icon,
       TransactionTag tag,
       String action,
-      @JsonKey(name: 'action_detail') String actionDetail,
+      @JsonKey(name: 'action_detail') String? actionDetail,
       String date,
       @JsonKey(name: 'transaction_id') String transactionId});
 
@@ -101,41 +104,63 @@ class _$TransactionCopyWithImpl<$Res> implements $TransactionCopyWith<$Res> {
 
   @override
   $Res call({
-    Object title = freezed,
-    Object description = freezed,
-    Object amount = freezed,
-    Object image = freezed,
-    Object icon = freezed,
-    Object tag = freezed,
-    Object action = freezed,
-    Object actionDetail = freezed,
-    Object date = freezed,
-    Object transactionId = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? amount = freezed,
+    Object? image = freezed,
+    Object? icon = freezed,
+    Object? tag = freezed,
+    Object? action = freezed,
+    Object? actionDetail = freezed,
+    Object? date = freezed,
+    Object? transactionId = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      amount: amount == freezed ? _value.amount : amount as String,
-      image: image == freezed ? _value.image : image as String,
-      icon: icon == freezed ? _value.icon : icon as String,
-      tag: tag == freezed ? _value.tag : tag as TransactionTag,
-      action: action == freezed ? _value.action : action as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as TransactionTag,
+      action: action == freezed
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String,
       actionDetail: actionDetail == freezed
           ? _value.actionDetail
-          : actionDetail as String,
-      date: date == freezed ? _value.date : date as String,
+          : actionDetail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       transactionId: transactionId == freezed
           ? _value.transactionId
-          : transactionId as String,
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
   @override
   $TransactionTagCopyWith<$Res> get tag {
-    if (_value.tag == null) {
-      return null;
-    }
     return $TransactionTagCopyWith<$Res>(_value.tag, (value) {
       return _then(_value.copyWith(tag: value));
     });
@@ -151,13 +176,13 @@ abstract class _$TransactionCopyWith<$Res>
   @override
   $Res call(
       {String title,
-      String description,
+      String? description,
       String amount,
       String image,
       String icon,
       TransactionTag tag,
       String action,
-      @JsonKey(name: 'action_detail') String actionDetail,
+      @JsonKey(name: 'action_detail') String? actionDetail,
       String date,
       @JsonKey(name: 'transaction_id') String transactionId});
 
@@ -177,33 +202,58 @@ class __$TransactionCopyWithImpl<$Res> extends _$TransactionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object title = freezed,
-    Object description = freezed,
-    Object amount = freezed,
-    Object image = freezed,
-    Object icon = freezed,
-    Object tag = freezed,
-    Object action = freezed,
-    Object actionDetail = freezed,
-    Object date = freezed,
-    Object transactionId = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? amount = freezed,
+    Object? image = freezed,
+    Object? icon = freezed,
+    Object? tag = freezed,
+    Object? action = freezed,
+    Object? actionDetail = freezed,
+    Object? date = freezed,
+    Object? transactionId = freezed,
   }) {
     return _then(_Transaction(
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String,
-      amount: amount == freezed ? _value.amount : amount as String,
-      image: image == freezed ? _value.image : image as String,
-      icon: icon == freezed ? _value.icon : icon as String,
-      tag: tag == freezed ? _value.tag : tag as TransactionTag,
-      action: action == freezed ? _value.action : action as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as TransactionTag,
+      action: action == freezed
+          ? _value.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as String,
       actionDetail: actionDetail == freezed
           ? _value.actionDetail
-          : actionDetail as String,
-      date: date == freezed ? _value.date : date as String,
+          : actionDetail // ignore: cast_nullable_to_non_nullable
+              as String?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       transactionId: transactionId == freezed
           ? _value.transactionId
-          : transactionId as String,
+          : transactionId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -213,16 +263,16 @@ class __$TransactionCopyWithImpl<$Res> extends _$TransactionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Transaction with DiagnosticableTreeMixin implements _Transaction {
   _$_Transaction(
-      {this.title,
+      {required this.title,
       this.description,
-      this.amount,
-      this.image,
-      this.icon,
-      this.tag,
-      this.action,
+      required this.amount,
+      required this.image,
+      required this.icon,
+      required this.tag,
+      required this.action,
       @JsonKey(name: 'action_detail') this.actionDetail,
-      this.date,
-      @JsonKey(name: 'transaction_id') this.transactionId});
+      required this.date,
+      @JsonKey(name: 'transaction_id') required this.transactionId});
 
   factory _$_Transaction.fromJson(Map<String, dynamic> json) =>
       _$_$_TransactionFromJson(json);
@@ -230,7 +280,7 @@ class _$_Transaction with DiagnosticableTreeMixin implements _Transaction {
   @override
   final String title;
   @override
-  final String description;
+  final String? description;
   @override
   final String amount;
   @override
@@ -243,7 +293,7 @@ class _$_Transaction with DiagnosticableTreeMixin implements _Transaction {
   final String action;
   @override
   @JsonKey(name: 'action_detail')
-  final String actionDetail;
+  final String? actionDetail;
   @override
   final String date;
   @override
@@ -315,6 +365,7 @@ class _$_Transaction with DiagnosticableTreeMixin implements _Transaction {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(transactionId);
 
+  @JsonKey(ignore: true)
   @override
   _$TransactionCopyWith<_Transaction> get copyWith =>
       __$TransactionCopyWithImpl<_Transaction>(this, _$identity);
@@ -327,42 +378,45 @@ class _$_Transaction with DiagnosticableTreeMixin implements _Transaction {
 
 abstract class _Transaction implements Transaction {
   factory _Transaction(
-      {String title,
-      String description,
-      String amount,
-      String image,
-      String icon,
-      TransactionTag tag,
-      String action,
-      @JsonKey(name: 'action_detail') String actionDetail,
-      String date,
-      @JsonKey(name: 'transaction_id') String transactionId}) = _$_Transaction;
+          {required String title,
+          String? description,
+          required String amount,
+          required String image,
+          required String icon,
+          required TransactionTag tag,
+          required String action,
+          @JsonKey(name: 'action_detail') String? actionDetail,
+          required String date,
+          @JsonKey(name: 'transaction_id') required String transactionId}) =
+      _$_Transaction;
 
   factory _Transaction.fromJson(Map<String, dynamic> json) =
       _$_Transaction.fromJson;
 
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String get amount;
+  String get amount => throw _privateConstructorUsedError;
   @override
-  String get image;
+  String get image => throw _privateConstructorUsedError;
   @override
-  String get icon;
+  String get icon => throw _privateConstructorUsedError;
   @override
-  TransactionTag get tag;
+  TransactionTag get tag => throw _privateConstructorUsedError;
   @override
-  String get action;
+  String get action => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'action_detail')
-  String get actionDetail;
+  String? get actionDetail => throw _privateConstructorUsedError;
   @override
-  String get date;
+  String get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'transaction_id')
-  String get transactionId;
+  String get transactionId => throw _privateConstructorUsedError;
   @override
-  _$TransactionCopyWith<_Transaction> get copyWith;
+  @JsonKey(ignore: true)
+  _$TransactionCopyWith<_Transaction> get copyWith =>
+      throw _privateConstructorUsedError;
 }

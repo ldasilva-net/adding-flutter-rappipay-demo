@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:fluro/fluro.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_module/app/core/logger/app_logger.dart';
 import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter/services.dart';
@@ -18,9 +17,9 @@ class RouterChannelDatasourceImpl extends RouterChannelDatasource {
       MethodChannel(RouterChannelConstants.routerChannelId);
 
   RouterChannelDatasourceImpl({
-    @required AppRouter appRouter,
-    @required AppLogger appLogger,
-  })  : _appRouter = appRouter,
+    required AppRouter appRouter,
+    required AppLogger appLogger,
+  })   : _appRouter = appRouter,
         _appLogger = appLogger {
     _setupRouterChannel();
     reportChannelIsReady();

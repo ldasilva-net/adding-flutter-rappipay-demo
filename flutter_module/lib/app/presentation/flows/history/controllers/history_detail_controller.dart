@@ -1,11 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
 
 class HistoryDetailController extends TransactionDetailModuleController {
-  HistoryDetailController({
-    @required AppRouter appRouter,
-  }) : super(appRouter: appRouter);
+  @override
+  final AppRouter appRouter;
+
+  HistoryDetailController({required this.appRouter}) : super();
 
   @override
   void onCallSupport() {

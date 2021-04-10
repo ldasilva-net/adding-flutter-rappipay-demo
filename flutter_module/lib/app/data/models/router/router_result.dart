@@ -5,8 +5,8 @@ part 'router_result.freezed.dart';
 part 'router_result.g.dart';
 
 @freezed
-abstract class RouterResult with _$RouterResult {
-  factory RouterResult({String result}) = _RouterResult;
+class RouterResult with _$RouterResult {
+  factory RouterResult({required String result}) = _RouterResult;
 
   factory RouterResult.fromJson(Map<String, dynamic> json) =>
       _$RouterResultFromJson(json);

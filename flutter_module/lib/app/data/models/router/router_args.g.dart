@@ -9,9 +9,9 @@ part of 'router_args.dart';
 _$_RouterArgs _$_$_RouterArgsFromJson(Map<String, dynamic> json) {
   return _$_RouterArgs(
     path: json['path'] as String,
-    replace: json['replace'] as bool,
-    clearStack: json['clearStack'] as bool,
-    args: json['args'] as String,
+    replace: json['replace'] as bool? ?? false,
+    clearStack: json['clearStack'] as bool? ?? false,
+    args: json['args'] as String?,
   );
 }
 

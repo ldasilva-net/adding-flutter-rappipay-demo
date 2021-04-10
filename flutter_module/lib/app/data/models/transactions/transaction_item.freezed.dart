@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'transaction_item.dart';
 
@@ -9,16 +9,17 @@ part of 'transaction_item.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$TransactionItemTearOff {
   const _$TransactionItemTearOff();
 
-// ignore: unused_element
   _Empty empty() {
     return const _Empty();
   }
 
-// ignore: unused_element
   _TransactionFound transactionFound(Transaction transaction) {
     return _TransactionFound(
       transaction,
@@ -27,33 +28,36 @@ class _$TransactionItemTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $TransactionItem = _$TransactionItemTearOff();
 
 /// @nodoc
 mixin _$TransactionItem {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result empty(),
-    @required Result transactionFound(Transaction transaction),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function(Transaction transaction) transactionFound,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result empty(),
-    Result transactionFound(Transaction transaction),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function(Transaction transaction)? transactionFound,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result empty(_Empty value),
-    @required Result transactionFound(_TransactionFound value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_TransactionFound value) transactionFound,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result empty(_Empty value),
-    Result transactionFound(_TransactionFound value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Empty value)? empty,
+    TResult Function(_TransactionFound value)? transactionFound,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -114,23 +118,20 @@ class _$_Empty with DiagnosticableTreeMixin implements _Empty {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result empty(),
-    @required Result transactionFound(Transaction transaction),
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function(Transaction transaction) transactionFound,
   }) {
-    assert(empty != null);
-    assert(transactionFound != null);
     return empty();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result empty(),
-    Result transactionFound(Transaction transaction),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function(Transaction transaction)? transactionFound,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (empty != null) {
       return empty();
     }
@@ -139,23 +140,20 @@ class _$_Empty with DiagnosticableTreeMixin implements _Empty {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result empty(_Empty value),
-    @required Result transactionFound(_TransactionFound value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_TransactionFound value) transactionFound,
   }) {
-    assert(empty != null);
-    assert(transactionFound != null);
     return empty(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result empty(_Empty value),
-    Result transactionFound(_TransactionFound value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Empty value)? empty,
+    TResult Function(_TransactionFound value)? transactionFound,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (empty != null) {
       return empty(this);
     }
@@ -190,18 +188,18 @@ class __$TransactionFoundCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object transaction = freezed,
+    Object? transaction = freezed,
   }) {
     return _then(_TransactionFound(
-      transaction == freezed ? _value.transaction : transaction as Transaction,
+      transaction == freezed
+          ? _value.transaction
+          : transaction // ignore: cast_nullable_to_non_nullable
+              as Transaction,
     ));
   }
 
   @override
   $TransactionCopyWith<$Res> get transaction {
-    if (_value.transaction == null) {
-      return null;
-    }
     return $TransactionCopyWith<$Res>(_value.transaction, (value) {
       return _then(_value.copyWith(transaction: value));
     });
@@ -212,7 +210,7 @@ class __$TransactionFoundCopyWithImpl<$Res>
 class _$_TransactionFound
     with DiagnosticableTreeMixin
     implements _TransactionFound {
-  const _$_TransactionFound(this.transaction) : assert(transaction != null);
+  const _$_TransactionFound(this.transaction);
 
   @override
   final Transaction transaction;
@@ -243,29 +241,27 @@ class _$_TransactionFound
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(transaction);
 
+  @JsonKey(ignore: true)
   @override
   _$TransactionFoundCopyWith<_TransactionFound> get copyWith =>
       __$TransactionFoundCopyWithImpl<_TransactionFound>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result empty(),
-    @required Result transactionFound(Transaction transaction),
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function(Transaction transaction) transactionFound,
   }) {
-    assert(empty != null);
-    assert(transactionFound != null);
     return transactionFound(transaction);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result empty(),
-    Result transactionFound(Transaction transaction),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function(Transaction transaction)? transactionFound,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transactionFound != null) {
       return transactionFound(transaction);
     }
@@ -274,23 +270,20 @@ class _$_TransactionFound
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result empty(_Empty value),
-    @required Result transactionFound(_TransactionFound value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Empty value) empty,
+    required TResult Function(_TransactionFound value) transactionFound,
   }) {
-    assert(empty != null);
-    assert(transactionFound != null);
     return transactionFound(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result empty(_Empty value),
-    Result transactionFound(_TransactionFound value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Empty value)? empty,
+    TResult Function(_TransactionFound value)? transactionFound,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (transactionFound != null) {
       return transactionFound(this);
     }
@@ -302,6 +295,8 @@ abstract class _TransactionFound implements TransactionItem {
   const factory _TransactionFound(Transaction transaction) =
       _$_TransactionFound;
 
-  Transaction get transaction;
-  _$TransactionFoundCopyWith<_TransactionFound> get copyWith;
+  Transaction get transaction => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$TransactionFoundCopyWith<_TransactionFound> get copyWith =>
+      throw _privateConstructorUsedError;
 }

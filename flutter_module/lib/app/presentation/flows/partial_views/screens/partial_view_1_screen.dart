@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PartialView1Screen extends HookWidget {
-  const PartialView1Screen({Key key}) : super(key: key);
+  const PartialView1Screen() : super();
 
   @override
   Widget build(BuildContext context) {

@@ -1,20 +1,20 @@
 import 'package:flutter_module/app/core/common_widgets/app_nav_bar.dart';
 import 'package:flutter_module/app/core/theme/app_text_theme.dart';
 import 'package:flutter_module/app/core/utils/r.dart';
+import 'package:flutter_module/app/data/models/transactions/transaction.dart';
 import 'package:flutter_module/app/presentation/modules/_base/base_module_scaffold.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_list.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_options.dart';
 import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_tag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'transaction_detail_module_providers.dart';
 
 class TransactionDetailModule extends HookWidget {
-  const TransactionDetailModule({
-    Key key,
-  }) : super(key: key);
+  const TransactionDetailModule() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,24 @@ class TransactionDetailModule extends HookWidget {
       return transactionDetailModuleController.onDispose;
     }, []);
 
+    return TransactionDetailWidget(
+        transactionDetailActions: transactionDetailModuleController,
+        currentTransaction: currentTransaction);
+  }
+}
+
+class TransactionDetailWidget extends StatelessWidget {
+  final TransactionDetailActions transactionDetailActions;
+  final Transaction currentTransaction;
+
+  const TransactionDetailWidget({
+    Key? key,
+    required this.transactionDetailActions,
+    required this.currentTransaction,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return BaseModuleScaffold(
       body: SafeArea(
         child: Container(
@@ -37,8 +55,7 @@ class TransactionDetailModule extends HookWidget {
             child: Column(
               children: [
                 AppNavBar(
-                  onTapBack: () =>
-                      transactionDetailModuleController.onBackPressed(),
+                  onTapBack: () => transactionDetailActions.onBackPressed(),
                 ),
                 Container(
                   width: 80,
@@ -66,7 +83,9 @@ class TransactionDetailModule extends HookWidget {
                   ),
                 ),
                 TransactionDetailTag(tag: currentTransaction.tag),
-                const TransactionDetailOptions(),
+                TransactionDetailOptions(
+                  actions: transactionDetailActions,
+                ),
                 TransactionDetailList(
                   transaction: currentTransaction,
                 )
