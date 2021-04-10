@@ -1,4 +1,4 @@
-import 'package:flutter_module/app/presentation/modules/_base/base_module_controller.dart';
+import '../_base/base_module_controller.dart';
 
 abstract class WarmupModuleController extends BaseModuleController {
   @override

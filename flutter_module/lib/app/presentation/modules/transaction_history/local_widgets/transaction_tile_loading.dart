@@ -1,6 +1,7 @@
-import 'package:flutter_module/app/core/theme/app_color.dart';
-import 'package:flutter_module/app/core/common_widgets/app_shimmer.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/common_widgets/app_shimmer.dart';
+import '../../../../core/theme/app_color.dart';
 
 class TransactionTileLoading extends StatelessWidget {
   const TransactionTileLoading() : super();

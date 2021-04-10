@@ -1,5 +1,5 @@
-import 'package:flutter_module/app/presentation/modules/_base/base_module_controller.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_options.dart';
+import '../_base/base_module_controller.dart';
+import 'local_widgets/transaction_detail_options.dart';
 
 abstract class TransactionDetailModuleController extends BaseModuleController
     implements TransactionDetailActions {

@@ -1,7 +1,8 @@
-import 'package:flutter_module/app/core/theme/app_color.dart';
-import 'package:flutter_module/app/core/theme/app_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../../../core/theme/app_color.dart';
+import '../../../../core/theme/app_text_theme.dart';
 
 class TransactionHistoryHeader extends StatelessWidget {
   const TransactionHistoryHeader() : super();

@@ -1,5 +1,6 @@
-import 'package:flutter_module/app/core/theme/app_text_theme.dart';
 import 'package:flutter/material.dart';
+
+import '../theme/app_text_theme.dart';
 
 class DefaultDialog extends StatelessWidget {
   final String title;

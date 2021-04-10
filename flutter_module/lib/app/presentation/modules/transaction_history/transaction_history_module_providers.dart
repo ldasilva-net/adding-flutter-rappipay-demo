@@ -1,9 +1,10 @@
-import 'package:flutter_module/app/data/models/transactions/transaction_item.dart';
-import 'package:flutter_module/app/data/models/transactions/transaction_response.dart';
-import 'package:flutter_module/app/data/repositories/transactions/transactions_repository_provider.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_history/transaction_history_module_constants.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_history/transaction_history_module_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../data/models/transactions/transaction_item.dart';
+import '../../../data/models/transactions/transaction_response.dart';
+import '../../../data/repositories/transactions/transactions_repository_provider.dart';
+import 'transaction_history_module_constants.dart';
+import 'transaction_history_module_controller.dart';
 
 final transactionHistoryModuleControllerProvider =
     ScopedProvider<TransactionHistoryModuleController>(null);

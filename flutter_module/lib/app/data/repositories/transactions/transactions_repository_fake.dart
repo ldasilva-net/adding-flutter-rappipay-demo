@@ -1,8 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter_module/app/data/models/transactions/transaction_response.dart';
-import 'package:flutter_module/app/data/repositories/transactions/transactions_repository.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../models/transactions/transaction_response.dart';
+import 'transactions_repository.dart';
 
 class TransactionsRepositoryFake implements TransactionsRepository {
   final Reader read;

@@ -1,7 +1,7 @@
-import 'package:flutter_module/app/core/routing/app_router.dart';
-import 'package:flutter_module/app/core/routing/app_routes.dart';
-import 'package:flutter_module/app/data/models/transactions/transaction.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_history/transaction_history_module_controller.dart';
+import '../../../../core/routing/app_router.dart';
+import '../../../../core/routing/app_routes.dart';
+import '../../../../data/models/transactions/transaction.dart';
+import '../../../modules/transaction_history/transaction_history_module_controller.dart';
 
 class HomeTransactionHistoryController
     extends TransactionHistoryModuleController {

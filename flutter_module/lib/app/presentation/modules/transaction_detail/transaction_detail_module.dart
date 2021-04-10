@@ -1,16 +1,16 @@
-import 'package:flutter_module/app/core/common_widgets/app_nav_bar.dart';
-import 'package:flutter_module/app/core/theme/app_text_theme.dart';
-import 'package:flutter_module/app/core/utils/r.dart';
-import 'package:flutter_module/app/data/models/transactions/transaction.dart';
-import 'package:flutter_module/app/presentation/modules/_base/base_module_scaffold.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_list.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_options.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/local_widgets/transaction_detail_tag.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../core/common_widgets/app_nav_bar.dart';
+import '../../../core/theme/app_text_theme.dart';
+import '../../../core/utils/r.dart';
+import '../../../data/models/transactions/transaction.dart';
+import '../_base/base_module_scaffold.dart';
+import 'local_widgets/transaction_detail_list.dart';
+import 'local_widgets/transaction_detail_options.dart';
+import 'local_widgets/transaction_detail_tag.dart';
+import 'transaction_detail_module_controller.dart';
 import 'transaction_detail_module_providers.dart';
 
 class TransactionDetailModule extends HookWidget {

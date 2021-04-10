@@ -1,9 +1,10 @@
-import 'package:flutter_module/app/core/theme/app_color.dart';
-import 'package:flutter_module/app/core/theme/app_text_theme.dart';
-import 'package:flutter_module/app/data/models/transactions/transaction_tag.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_module/app/core/utils/scope_function.dart';
 import 'package:supercharged/supercharged.dart';
+
+import '../../../../core/theme/app_color.dart';
+import '../../../../core/theme/app_text_theme.dart';
+import '../../../../core/utils/scope_function.dart';
+import '../../../../data/models/transactions/transaction_tag.dart';
 
 class TransactionDetailTag extends StatelessWidget {
   final TransactionTag tag;

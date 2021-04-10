@@ -1,6 +1,7 @@
-import 'package:flutter_module/app/data/models/transactions/transaction_tag.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'transaction_tag.dart';
 
 part 'transaction.freezed.dart';
 part 'transaction.g.dart';

@@ -1,9 +1,10 @@
-import 'package:flutter_module/app/core/common_widgets/default_dialog.dart';
-import 'package:flutter_module/app/core/routing/app_route_handlers.dart';
-import 'package:flutter_module/app/core/routing/app_routes.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../common_widgets/default_dialog.dart';
+import 'app_route_handlers.dart';
+import 'app_routes.dart';
 
 final appRouterProvider = Provider<AppRouter>((ref) => AppRouter());
 

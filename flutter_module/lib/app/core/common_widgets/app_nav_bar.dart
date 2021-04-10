@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module/app/core/theme/app_color.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../theme/app_color.dart';
 
 class AppNavBar extends StatelessWidget {
   final VoidCallback onTapBack;

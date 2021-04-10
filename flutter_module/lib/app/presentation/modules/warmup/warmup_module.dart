@@ -1,10 +1,11 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_module/app/core/theme/app_color.dart';
-import 'package:flutter_module/app/core/utils/r.dart';
-import 'package:flutter_module/app/presentation/modules/_base/base_module_scaffold.dart';
-import 'package:flutter_module/app/presentation/modules/warmup/warmup_animations_module_providers.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../core/theme/app_color.dart';
+import '../../../core/utils/r.dart';
+import '../_base/base_module_scaffold.dart';
+import 'warmup_animations_module_providers.dart';
 
 class WarmupModule extends HookWidget {
   final List<Widget> warmupModulesList;

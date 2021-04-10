@@ -1,8 +1,9 @@
-import 'package:flutter_module/app/core/theme/app_text_theme.dart';
-import 'package:flutter_module/app/core/utils/r.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../core/theme/app_text_theme.dart';
+import '../../../../core/utils/r.dart';
 
 class TransactionDetailOptions extends HookWidget {
   final TransactionDetailOptionsActions actions;

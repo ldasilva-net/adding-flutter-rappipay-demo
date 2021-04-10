@@ -1,6 +1,7 @@
-import 'package:flutter_module/app/presentation/multiplatform_demo_app.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'app/presentation/multiplatform_demo_app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

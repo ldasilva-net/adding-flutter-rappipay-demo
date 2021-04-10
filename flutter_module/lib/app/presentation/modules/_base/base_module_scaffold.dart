@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module/app/core/theme/app_color.dart';
-import 'package:flutter_module/app/core/theme/app_theme.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+
+import '../../../core/theme/app_color.dart';
+import '../../../core/theme/app_theme.dart';
 
 class BaseModuleScaffold extends StatelessWidget {
   final Widget body;

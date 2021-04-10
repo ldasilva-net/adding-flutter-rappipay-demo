@@ -1,9 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter_module/app/data/models/transactions/transaction.dart';
-import 'package:flutter_module/app/data/models/transactions/transaction_detail.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../data/models/transactions/transaction.dart';
+import '../../../data/models/transactions/transaction_detail.dart';
+import 'transaction_detail_module_controller.dart';
 
 final transactionDetailModuleWarmupReadyProvider =
     StateProvider<bool>((ref) => false);

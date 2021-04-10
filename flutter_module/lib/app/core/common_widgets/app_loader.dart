@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_module/app/core/theme/app_color.dart';
+
+import '../theme/app_color.dart';
 
 class AppLoader extends StatelessWidget {
   const AppLoader() : super();

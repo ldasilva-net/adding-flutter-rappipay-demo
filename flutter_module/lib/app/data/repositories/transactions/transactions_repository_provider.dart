@@ -1,6 +1,7 @@
-import 'package:flutter_module/app/data/repositories/transactions/transactions_repository.dart';
-import 'package:flutter_module/app/data/repositories/transactions/transactions_repository_fake.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'transactions_repository.dart';
+import 'transactions_repository_fake.dart';
 
 final transactionsRepositoryProvider =
     Provider.autoDispose<TransactionsRepository>(

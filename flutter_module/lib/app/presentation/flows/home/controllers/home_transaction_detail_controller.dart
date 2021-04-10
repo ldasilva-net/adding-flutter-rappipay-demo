@@ -1,5 +1,5 @@
-import 'package:flutter_module/app/core/routing/app_router.dart';
-import 'package:flutter_module/app/presentation/modules/transaction_detail/transaction_detail_module_controller.dart';
+import '../../../../core/routing/app_router.dart';
+import '../../../modules/transaction_detail/transaction_detail_module_controller.dart';
 
 class HomeTransactionDetailController
     extends TransactionDetailModuleController {

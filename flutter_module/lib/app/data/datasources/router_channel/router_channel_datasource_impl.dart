@@ -1,13 +1,14 @@
 import 'dart:convert';
 
 import 'package:fluro/fluro.dart';
-import 'package:flutter_module/app/core/logger/app_logger.dart';
-import 'package:flutter_module/app/core/routing/app_router.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_module/app/data/datasources/router_channel/router_channel_datasource.dart';
-import 'package:flutter_module/app/data/datasources/router_channel/router_channel_datasource_constants.dart';
-import 'package:flutter_module/app/data/models/router/router_args.dart';
-import 'package:flutter_module/app/data/models/router/router_result.dart';
+
+import '../../../core/logger/app_logger.dart';
+import '../../../core/routing/app_router.dart';
+import '../../models/router/router_args.dart';
+import '../../models/router/router_result.dart';
+import 'router_channel_datasource.dart';
+import 'router_channel_datasource_constants.dart';
 
 class RouterChannelDatasourceImpl extends RouterChannelDatasource {
   final AppRouter _appRouter;
