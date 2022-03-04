@@ -1,4 +1,4 @@
-# Incorporating multiplatform technology in the development of RappiPay
+# Adding Flutter to the development of RappiBank
 
 Content created for *"Adding Flutter to the development of RappiBank"* articles
 
